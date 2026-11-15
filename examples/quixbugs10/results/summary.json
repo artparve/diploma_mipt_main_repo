@@ -1,0 +1,34 @@
+{
+  "provenance_ref": "data_origin.json",
+  "weights": {
+    "D": 0.3333333333333333,
+    "C": 0.3333333333333333,
+    "Q": 0.3333333333333333
+  },
+  "groups": {
+    "Gemma": {
+      "D": 0.7666666666666666,
+      "C": 0.6916666666666667,
+      "Q": 0.3125,
+      "CCRQS": 0.5902777777777777,
+      "responses": 10,
+      "rating_records": 20,
+      "found_primary_defects": 8,
+      "extra_issues": 2,
+      "proposed_patches": 7,
+      "target_passed_patches": 4
+    },
+    "Qwen-Coder": {
+      "D": 0.9666666666666667,
+      "C": 0.9666666666666667,
+      "Q": 0.7,
+      "CCRQS": 0.8777777777777778,
+      "responses": 10,
+      "rating_records": 20,
+      "found_primary_defects": 10,
+      "extra_issues": 1,
+      "proposed_patches": 9,
+      "target_passed_patches": 7
+    }
+  }
+}

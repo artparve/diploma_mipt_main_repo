@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "file": "python_programs/quicksort.py",
+      "line_start": 7,
+      "line_end": 7,
+      "category": "functional",
+      "severity": "medium",
+      "comment": "Элементы arr[1:], равные pivot, не попадают ни в lesser, ни в greater. Например, [2, 2, 1] теряет одну двойку. Замените условие greater на x >= pivot; pivot по-прежнему добавляется один раз.",
+      "proposed_patch": "--- a/python_programs/quicksort.py\n+++ b/python_programs/quicksort.py\n@@ -4,7 +4,7 @@\n \n     pivot = arr[0]\n     lesser = quicksort([x for x in arr[1:] if x < pivot])\n-    greater = quicksort([x for x in arr[1:] if x > pivot])\n+    greater = quicksort([x for x in arr[1:] if x >= pivot])\n     return lesser + [pivot] + greater\n \n \"\"\"\n",
+      "confidence": 0.85
+    }
+  ]
+}

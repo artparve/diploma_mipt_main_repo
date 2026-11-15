@@ -1,0 +1,17 @@
+{
+  "config_version": "pipeline-v8",
+  "backend": "replay",
+  "fixture": "fixtures/reference_replay.json",
+  "case_ids": [
+    "gcd",
+    "find_in_sorted",
+    "quicksort"
+  ],
+  "executor": "docker",
+  "docker_image": "ccrqs-runner:v8",
+  "test_timeout_seconds": 2,
+  "process_timeout_seconds": 40,
+  "seed": 42,
+  "max_input_tokens": 4096,
+  "max_new_tokens": 2048
+}

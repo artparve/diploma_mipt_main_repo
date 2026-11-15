@@ -1,0 +1,3 @@
+* text=auto eol=lf
+data/manifest.jsonl -text
+contracts/examples/full_example/** -text

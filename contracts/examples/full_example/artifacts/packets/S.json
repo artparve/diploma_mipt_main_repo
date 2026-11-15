@@ -1,0 +1,11 @@
+{
+  "source_files": [
+    {
+      "path": "src/math_utils.py",
+      "content": "def average(values):\n    return sum(values) / len(values)\n"
+    }
+  ],
+  "allowed_context": "Для непустого списка чисел вернуть среднее, включая отрицательные числа; для пустого списка вызвать ValueError.",
+  "proposed_patch": "--- a/src/math_utils.py\n+++ b/src/math_utils.py\n@@ -1,2 +1,4 @@\n def average(values):\n+    if not values:\n+        raise ValueError(\"values must not be empty\")\n     return sum(values) / len(values)\n",
+  "expected_behavior": "Для непустого списка чисел вернуть среднее, включая отрицательные числа; для пустого списка вызвать ValueError."
+}

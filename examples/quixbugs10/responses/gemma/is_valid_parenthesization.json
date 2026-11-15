@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "file": "python_programs/is_valid_parenthesization.py",
+      "line_start": 12,
+      "line_end": 12,
+      "category": "functional",
+      "severity": "medium",
+      "comment": "В конце возвращается True даже при незакрытых открывающих скобках. Нужно убедиться, что скобки сбалансированы к окончанию обхода.",
+      "proposed_patch": "--- a/python_programs/is_valid_parenthesization.py\n+++ b/python_programs/is_valid_parenthesization.py\n@@ -1,31 +1,2 @@\n-\n def is_valid_parenthesization(parens):\n-    depth = 0\n-    for paren in parens:\n-        if paren == '(':\n-            depth += 1\n-        else:\n-            depth -= 1\n-            if depth < 0:\n-                return False\n-\n-    return True\n-\n-\n-\"\"\"\n-Nested Parens\n-Input:\n-    parens: A string of parentheses\n-\n-Precondition:\n-    all(paren in '()' for paren in parens)\n-\n-Output:\n-    Whether the parentheses are properly nested\n-\n-Examples:\n-    >>> is_valid_parenthesization('((()()))()')\n-    True\n-    >>> is_valid_parenthesization(')()(')\n-    False\n-\"\"\"\n+    return parens.count('(') == parens.count(')')\n",
+      "confidence": 0.85
+    }
+  ]
+}

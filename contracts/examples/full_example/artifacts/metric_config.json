@@ -1,0 +1,14 @@
+{
+  "version": "metrics-demo-v1",
+  "status": "invented_example_only_not_approved_protocol",
+  "D": "2*TP/(2*TP+FP+FN)",
+  "C": "(median(specificity)+median(explanation_correctness)+median(actionability))/6",
+  "Q": "A*T*R*median(S)",
+  "H": "median(independent H)",
+  "CCRQS": "0.4*D+0.3*C+0.3*Q",
+  "weights": {
+    "D": 0.4,
+    "C": 0.3,
+    "Q": 0.3
+  }
+}

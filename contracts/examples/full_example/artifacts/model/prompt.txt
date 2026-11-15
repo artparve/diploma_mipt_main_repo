@@ -1,0 +1,6 @@
+Проверь Python-код. Верни JSON schema_version=1.0 с issues: file, line_start, line_end, category, severity, comment, proposed_patch, confidence.
+Контракт функции:
+Для непустого списка чисел вернуть среднее, включая отрицательные числа; для пустого списка вызвать ValueError.
+Файл: src/math_utils.py
+def average(values):
+    return sum(values) / len(values)

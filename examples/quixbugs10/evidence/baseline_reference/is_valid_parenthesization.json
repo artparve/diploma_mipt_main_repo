@@ -1,0 +1,128 @@
+{
+  "buggy": {
+    "status": "ok",
+    "exit_code": 1,
+    "tests": {
+      "test_is_valid_parenthesization[input_data0-True]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.0001737000020511914
+      },
+      "test_is_valid_parenthesization[input_data1-False]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00011760000052163377
+      },
+      "test_is_valid_parenthesization[input_data2-False]": {
+        "outcome": "failed",
+        "phase": "call",
+        "seconds": 0.00029969999741297215,
+        "detail": "input_data = ['(('], expected = False\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_is_valid_parenthesization(input_data, expected):\n>       assert is_valid_parenthesization(*input_data) == expected\nE       AssertionError: assert True == False\nE        +  where True = is_valid_parenthesization(*['(('])\n\npython_testcases\\test_is_valid_parenthesization.py:15: AssertionError"
+      }
+    },
+    "collection_errors": [],
+    "seconds": 0.7466722000026493,
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "pytest": "8.3.5",
+    "process_exit_code": 0,
+    "stdout": "..F                                                                      [100%]\n================================== FAILURES ===================================\n______________ test_is_valid_parenthesization[input_data2-False] ______________\n\ninput_data = ['(('], expected = False\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_is_valid_parenthesization(input_data, expected):\n>       assert is_valid_parenthesization(*input_data) == expected\nE       AssertionError: assert True == False\nE        +  where True = is_valid_parenthesization(*['(('])\n\npython_testcases\\test_is_valid_parenthesization.py:15: AssertionError\n=========================== short test summary info ===========================\nFAILED python_testcases/test_is_valid_parenthesization.py::test_is_valid_parenthesization[input_data2-False]\n1 failed, 2 passed in 0.66s\n",
+    "stderr": "",
+    "wall_seconds": 1.0908225999992283,
+    "executor": "trusted_local",
+    "attempts": [
+      {
+        "status": "ok",
+        "exit_code": 1,
+        "tests": {
+          "test_is_valid_parenthesization[input_data0-True]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.0001737000020511914
+          },
+          "test_is_valid_parenthesization[input_data1-False]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00011760000052163377
+          },
+          "test_is_valid_parenthesization[input_data2-False]": {
+            "outcome": "failed",
+            "phase": "call",
+            "seconds": 0.00029969999741297215,
+            "detail": "input_data = ['(('], expected = False\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_is_valid_parenthesization(input_data, expected):\n>       assert is_valid_parenthesization(*input_data) == expected\nE       AssertionError: assert True == False\nE        +  where True = is_valid_parenthesization(*['(('])\n\npython_testcases\\test_is_valid_parenthesization.py:15: AssertionError"
+          }
+        },
+        "collection_errors": [],
+        "seconds": 0.7466722000026493,
+        "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+        "pytest": "8.3.5",
+        "process_exit_code": 0,
+        "stdout": "..F                                                                      [100%]\n================================== FAILURES ===================================\n______________ test_is_valid_parenthesization[input_data2-False] ______________\n\ninput_data = ['(('], expected = False\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_is_valid_parenthesization(input_data, expected):\n>       assert is_valid_parenthesization(*input_data) == expected\nE       AssertionError: assert True == False\nE        +  where True = is_valid_parenthesization(*['(('])\n\npython_testcases\\test_is_valid_parenthesization.py:15: AssertionError\n=========================== short test summary info ===========================\nFAILED python_testcases/test_is_valid_parenthesization.py::test_is_valid_parenthesization[input_data2-False]\n1 failed, 2 passed in 0.66s\n",
+        "stderr": "",
+        "wall_seconds": 1.0908225999992283,
+        "executor": "trusted_local"
+      }
+    ]
+  },
+  "reference": {
+    "status": "ok",
+    "exit_code": 0,
+    "tests": {
+      "test_is_valid_parenthesization[input_data0-True]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00013940000280854292
+      },
+      "test_is_valid_parenthesization[input_data1-False]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.0001350999991700519
+      },
+      "test_is_valid_parenthesization[input_data2-False]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00010639999891282059
+      }
+    },
+    "collection_errors": [],
+    "seconds": 0.13899559999845224,
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "pytest": "8.3.5",
+    "process_exit_code": 0,
+    "stdout": "...                                                                      [100%]\n3 passed in 0.05s\n",
+    "stderr": "",
+    "wall_seconds": 0.48188440000012633,
+    "executor": "trusted_local",
+    "attempts": [
+      {
+        "status": "ok",
+        "exit_code": 0,
+        "tests": {
+          "test_is_valid_parenthesization[input_data0-True]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00013940000280854292
+          },
+          "test_is_valid_parenthesization[input_data1-False]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.0001350999991700519
+          },
+          "test_is_valid_parenthesization[input_data2-False]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00010639999891282059
+          }
+        },
+        "collection_errors": [],
+        "seconds": 0.13899559999845224,
+        "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+        "pytest": "8.3.5",
+        "process_exit_code": 0,
+        "stdout": "...                                                                      [100%]\n3 passed in 0.05s\n",
+        "stderr": "",
+        "wall_seconds": 0.48188440000012633,
+        "executor": "trusted_local"
+      }
+    ]
+  }
+}

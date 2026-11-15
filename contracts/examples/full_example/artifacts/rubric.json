@@ -1,0 +1,94 @@
+{
+  "rubric_version": "rubric-demo-full-v1",
+  "status": "synthetic_demo_only",
+  "based_on": "annotation-v6 draft, simplified only for this invented example",
+  "title": "Учебная схема оценки для полного примера",
+  "roles": [
+    "M",
+    "C",
+    "S",
+    "H"
+  ],
+  "required_independent_ratings_per_role": 3,
+  "forms": {
+    "M": {
+      "issue_labels": [
+        "primary_match",
+        "duplicate_primary",
+        "additional_valid",
+        "false_positive",
+        "out_of_scope"
+      ],
+      "rationale_required": true
+    },
+    "C": {
+      "specificity": [
+        0,
+        1,
+        2
+      ],
+      "explanation_correctness": [
+        0,
+        1,
+        2
+      ],
+      "actionability": [
+        0,
+        1,
+        2
+      ],
+      "rationale_required": true
+    },
+    "S": {
+      "semantic_correctness": [
+        0,
+        0.5,
+        1
+      ],
+      "rationale_required": true
+    },
+    "H": {
+      "holistic_quality": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "rationale_required": true
+    }
+  },
+  "rules": {
+    "blind_model_identity": true,
+    "blind_other_ratings": true,
+    "H_separate_from_M_C_S_for_same_example": true,
+    "C_submitted_before_S_packet_opened": true,
+    "M_disagreement_requires_adjudication": true,
+    "C_requires_final_M_primary_match": true,
+    "S_requires_A_equals_T_equals_1": true,
+    "submitted_answers_immutable": true,
+    "abstention_is_not_zero": true
+  },
+  "scale_anchors": {
+    "C": {
+      "0": "Признак отсутствует или неверен",
+      "1": "Признак выражен частично",
+      "2": "Признак выражен достаточно"
+    },
+    "S": {
+      "0": "Некорректное исправление",
+      "0.5": "Частичное исправление",
+      "1": "Корректное исправление"
+    },
+    "H": {
+      "0": "Неполезно",
+      "1": "Мало пользы",
+      "2": "Нужна существенная доработка",
+      "3": "Полезно с небольшими недочётами",
+      "4": "Готово к применению"
+    }
+  },
+  "created_at": "2026-11-11T09:15:00+03:00",
+  "synthetic": true,
+  "source_type": "invented_full_example"
+}

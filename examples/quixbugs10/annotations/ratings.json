@@ -1,0 +1,751 @@
+{
+  "source_type": "prepared_demonstration_records",
+  "synthetic": true,
+  "real_experts_participated": false,
+  "ratings": [
+    {
+      "review_id": "gcd__gemma",
+      "case_id": "gcd",
+      "response_group": "Gemma",
+      "expert_id": "E1",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        2
+      ],
+      "patch_meaning_score": 1,
+      "explanation": "Ошибка и место определены верно, исправление восстанавливает алгоритм Евклида.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "gcd__gemma",
+      "case_id": "gcd",
+      "response_group": "Gemma",
+      "expert_id": "E2",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        1
+      ],
+      "patch_meaning_score": 1,
+      "explanation": "Исправление корректно; в комментарии полезно привести конкретный пример зацикливания.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "gcd__qwen_coder",
+      "case_id": "gcd",
+      "response_group": "Qwen-Coder",
+      "expert_id": "E1",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        2
+      ],
+      "patch_meaning_score": 1,
+      "explanation": "Точная локализация, причина и корректное действие.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "gcd__qwen_coder",
+      "case_id": "gcd",
+      "response_group": "Qwen-Coder",
+      "expert_id": "E2",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        2
+      ],
+      "patch_meaning_score": 1,
+      "explanation": "Минимальный patch восстанавливает завершение рекурсии.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "find_in_sorted__gemma",
+      "case_id": "find_in_sorted",
+      "response_group": "Gemma",
+      "expert_id": "E1",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        1
+      ],
+      "patch_meaning_score": null,
+      "explanation": "Дефект найден, но готового исправления нет.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "find_in_sorted__gemma",
+      "case_id": "find_in_sorted",
+      "response_group": "Gemma",
+      "expert_id": "E2",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        1,
+        1
+      ],
+      "patch_meaning_score": null,
+      "explanation": "Направление верное, однако точная граница mid + 1 не указана и patch отсутствует.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "find_in_sorted__qwen_coder",
+      "case_id": "find_in_sorted",
+      "response_group": "Qwen-Coder",
+      "expert_id": "E1",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match",
+        "duplicate_primary"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        2
+      ],
+      "patch_meaning_score": 1,
+      "explanation": "Основное замечание и patch верны, но второе повторяет ту же ошибку.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "find_in_sorted__qwen_coder",
+      "case_id": "find_in_sorted",
+      "response_group": "Qwen-Coder",
+      "expert_id": "E2",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match",
+        "duplicate_primary"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        2
+      ],
+      "patch_meaning_score": 1,
+      "explanation": "Повтор не является вторым обнаруженным дефектом; один duplicate_primary.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "quicksort__gemma",
+      "case_id": "quicksort",
+      "response_group": "Gemma",
+      "expert_id": "E1",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        1
+      ],
+      "patch_meaning_score": null,
+      "explanation": "Причина найдена. Но patch включает равные элементы сразу в обе части и размножает их.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "quicksort__gemma",
+      "case_id": "quicksort",
+      "response_group": "Gemma",
+      "expert_id": "E2",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        2
+      ],
+      "patch_meaning_score": null,
+      "explanation": "Комментарий верный, а diff ему противоречит: равенство добавлено в две ветки вместо одной.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "quicksort__qwen_coder",
+      "case_id": "quicksort",
+      "response_group": "Qwen-Coder",
+      "expert_id": "E1",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        2
+      ],
+      "patch_meaning_score": 1,
+      "explanation": "Есть конкретный пример и точное минимальное исправление.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "quicksort__qwen_coder",
+      "case_id": "quicksort",
+      "response_group": "Qwen-Coder",
+      "expert_id": "E2",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        2
+      ],
+      "patch_meaning_score": 1,
+      "explanation": "Дубликаты сохраняются, а разбиение остаётся взаимоисключающим.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "mergesort__gemma",
+      "case_id": "mergesort",
+      "response_group": "Gemma",
+      "expert_id": "E1",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match",
+        "out_of_scope"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        2
+      ],
+      "patch_meaning_score": 1,
+      "explanation": "Основной дефект исправлен; второе замечание только о стиле и вне задания.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "mergesort__gemma",
+      "case_id": "mergesort",
+      "response_group": "Gemma",
+      "expert_id": "E2",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match",
+        "out_of_scope"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        1
+      ],
+      "patch_meaning_score": 1,
+      "explanation": "Рабочий patch, но лишнее стилевое замечание снижает точность обнаружения.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "mergesort__qwen_coder",
+      "case_id": "mergesort",
+      "response_group": "Qwen-Coder",
+      "expert_id": "E1",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        2
+      ],
+      "patch_meaning_score": null,
+      "explanation": "Ошибка названа верно, но возврат несортированного списка длины 2 ломает алгоритм.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "mergesort__qwen_coder",
+      "case_id": "mergesort",
+      "response_group": "Qwen-Coder",
+      "expert_id": "E2",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        1
+      ],
+      "patch_meaning_score": null,
+      "explanation": "Patch чрезмерно расширяет базовый случай; [2, 1] остаётся несортированным.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "sieve__gemma",
+      "case_id": "sieve",
+      "response_group": "Gemma",
+      "expert_id": "E1",
+      "synthetic": true,
+      "issue_labels": [],
+      "comment_scores": null,
+      "patch_meaning_score": null,
+      "explanation": "Основная ошибка не замечена; список issues пуст.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "sieve__gemma",
+      "case_id": "sieve",
+      "response_group": "Gemma",
+      "expert_id": "E2",
+      "synthetic": true,
+      "issue_labels": [],
+      "comment_scores": null,
+      "patch_meaning_score": null,
+      "explanation": "Полезного ревью нет: any на пустом списке блокирует добавление первого простого числа.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "sieve__qwen_coder",
+      "case_id": "sieve",
+      "response_group": "Qwen-Coder",
+      "expert_id": "E1",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        1
+      ],
+      "patch_meaning_score": null,
+      "explanation": "Причина остановки найдена, но patch лечит лишь пустой список и сохраняет неверное any.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "sieve__qwen_coder",
+      "case_id": "sieve",
+      "response_group": "Qwen-Coder",
+      "expert_id": "E2",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        2
+      ],
+      "patch_meaning_score": null,
+      "explanation": "Составные числа с некоторыми неделящими их простыми ошибочно добавляются, например 4.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "flatten__gemma",
+      "case_id": "flatten",
+      "response_group": "Gemma",
+      "expert_id": "E1",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        2
+      ],
+      "patch_meaning_score": null,
+      "explanation": "Описание дефекта верное, однако yield from пытается рекурсивно обходить скаляр и вызывает TypeError.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "flatten__gemma",
+      "case_id": "flatten",
+      "response_group": "Gemma",
+      "expert_id": "E2",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        1
+      ],
+      "patch_meaning_score": null,
+      "explanation": "Комментарий предлагает yield x, а предложенный diff делает другое.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "flatten__qwen_coder",
+      "case_id": "flatten",
+      "response_group": "Qwen-Coder",
+      "expert_id": "E1",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        2
+      ],
+      "patch_meaning_score": 1,
+      "explanation": "Верно объяснена разница между выдачей элемента и генератора.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "flatten__qwen_coder",
+      "case_id": "flatten",
+      "response_group": "Qwen-Coder",
+      "expert_id": "E2",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        2
+      ],
+      "patch_meaning_score": 1,
+      "explanation": "Исправление соответствует контракту произвольных не-списочных объектов.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "is_valid_parenthesization__gemma",
+      "case_id": "is_valid_parenthesization",
+      "response_group": "Gemma",
+      "expert_id": "E1",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        1
+      ],
+      "patch_meaning_score": 0,
+      "explanation": "Количество открывающих и закрывающих скобок совпадать должно, но этого недостаточно: порядок теряется.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "is_valid_parenthesization__gemma",
+      "case_id": "is_valid_parenthesization",
+      "response_group": "Gemma",
+      "expert_id": "E2",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        1
+      ],
+      "patch_meaning_score": 0.5,
+      "explanation": "Частично решён исходный случай, однако строка )()( ошибочно принимается. Исправление требует доработки.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "is_valid_parenthesization__qwen_coder",
+      "case_id": "is_valid_parenthesization",
+      "response_group": "Qwen-Coder",
+      "expert_id": "E1",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        2
+      ],
+      "patch_meaning_score": 1,
+      "explanation": "Учитываются оба условия правильной последовательности.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "is_valid_parenthesization__qwen_coder",
+      "case_id": "is_valid_parenthesization",
+      "response_group": "Qwen-Coder",
+      "expert_id": "E2",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        2
+      ],
+      "patch_meaning_score": 1,
+      "explanation": "Минимальный patch сохраняет проверку порядка скобок.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "levenshtein__gemma",
+      "case_id": "levenshtein",
+      "response_group": "Gemma",
+      "expert_id": "E1",
+      "synthetic": true,
+      "issue_labels": [
+        "out_of_scope"
+      ],
+      "comment_scores": null,
+      "patch_meaning_score": null,
+      "explanation": "Замечание о скорости не раскрывает подтверждённый функциональный дефект.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "levenshtein__gemma",
+      "case_id": "levenshtein",
+      "response_group": "Gemma",
+      "expert_id": "E2",
+      "synthetic": true,
+      "issue_labels": [
+        "out_of_scope"
+      ],
+      "comment_scores": null,
+      "patch_meaning_score": null,
+      "explanation": "Ошибка в стоимости совпадающих символов пропущена; комментарий вне основной задачи.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "levenshtein__qwen_coder",
+      "case_id": "levenshtein",
+      "response_group": "Qwen-Coder",
+      "expert_id": "E1",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        2
+      ],
+      "patch_meaning_score": 1,
+      "explanation": "Правильно исправлена стоимость совпадающих символов.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "levenshtein__qwen_coder",
+      "case_id": "levenshtein",
+      "response_group": "Qwen-Coder",
+      "expert_id": "E2",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        1
+      ],
+      "patch_meaning_score": 1,
+      "explanation": "Верный patch; конкретный контрпример сделал бы комментарий ещё убедительнее.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "max_sublist_sum__gemma",
+      "case_id": "max_sublist_sum",
+      "response_group": "Gemma",
+      "expert_id": "E1",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        2
+      ],
+      "patch_meaning_score": 1,
+      "explanation": "Предложен правильный переход алгоритма; разрешённый пустой подсписок сохранён.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "max_sublist_sum__gemma",
+      "case_id": "max_sublist_sum",
+      "response_group": "Gemma",
+      "expert_id": "E2",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        1,
+        2
+      ],
+      "patch_meaning_score": 1,
+      "explanation": "Исправление корректно, но объяснение последствия можно подкрепить примером отрицательного префикса.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "max_sublist_sum__qwen_coder",
+      "case_id": "max_sublist_sum",
+      "response_group": "Qwen-Coder",
+      "expert_id": "E1",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        1
+      ],
+      "patch_meaning_score": null,
+      "explanation": "Дефект найден и объяснён, но применимого diff нет.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "max_sublist_sum__qwen_coder",
+      "case_id": "max_sublist_sum",
+      "response_group": "Qwen-Coder",
+      "expert_id": "E2",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        2
+      ],
+      "patch_meaning_score": null,
+      "explanation": "Направление исправления правильное; отсутствие patch даёт Q=0.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "powerset__gemma",
+      "case_id": "powerset",
+      "response_group": "Gemma",
+      "expert_id": "E1",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        1,
+        1
+      ],
+      "patch_meaning_score": null,
+      "explanation": "Направление верное, но patch добавляет только пустое множество, а не все rest_subsets.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "powerset__gemma",
+      "case_id": "powerset",
+      "response_group": "Gemma",
+      "expert_id": "E2",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        1
+      ],
+      "patch_meaning_score": null,
+      "explanation": "Для [1, 2] по-прежнему отсутствует [2]; полный набор не восстановлен.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "powerset__qwen_coder",
+      "case_id": "powerset",
+      "response_group": "Qwen-Coder",
+      "expert_id": "E1",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        2
+      ],
+      "patch_meaning_score": 1,
+      "explanation": "Выявлена пропущенная половина результата и дано точное действие.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    },
+    {
+      "review_id": "powerset__qwen_coder",
+      "case_id": "powerset",
+      "response_group": "Qwen-Coder",
+      "expert_id": "E2",
+      "synthetic": true,
+      "issue_labels": [
+        "primary_match"
+      ],
+      "comment_scores": [
+        2,
+        2,
+        2
+      ],
+      "patch_meaning_score": 1,
+      "explanation": "Корректное рекурсивное построение всех подмножеств.",
+      "role": "demo_component_rater",
+      "source_type": "prepared_demonstration_record"
+    }
+  ]
+}

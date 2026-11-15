@@ -1,0 +1,23 @@
+{
+  "dataset_origin": "QuixBugs local snapshot",
+  "dataset_commit": "4257f44b0ff1181dedaedee6a447e133219fcebf",
+  "responses_source": "prepared_demonstration_texts",
+  "annotations_source": "prepared_demonstration_records",
+  "synthetic": true,
+  "real_models_called": false,
+  "real_experts_participated": false,
+  "measured_components": [
+    "JSON format",
+    "diff applicability",
+    "Python syntax",
+    "target tests",
+    "regression tests"
+  ],
+  "constructed_components": [
+    "review comments and patches",
+    "issue matching labels",
+    "C ratings",
+    "S ratings"
+  ],
+  "original_package": "Демонстрация пайплайна/QuixBugs 10 примеров"
+}

@@ -1,0 +1,344 @@
+{
+  "synthetic": true,
+  "real_llm_called": false,
+  "expert_scores_are_simulated": true,
+  "execution_scope": "trusted educational fixture only; not production pipeline or container test",
+  "python_version": "3.12.14",
+  "source_sha256": "9fa9f4df7a46c0c01dc57bd56b4e35552fc0c0c96fcf91b7c360260ce8f24917",
+  "instance_id": "demo_average_001",
+  "baseline": [
+    {
+      "test": "empty",
+      "group": "target",
+      "expected": null,
+      "actual": null,
+      "passed": false,
+      "error": "ZeroDivisionError"
+    },
+    {
+      "test": "positive",
+      "group": "regression",
+      "expected": 3.0,
+      "actual": 3.0,
+      "passed": true,
+      "error": null
+    },
+    {
+      "test": "zero",
+      "group": "regression",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true,
+      "error": null
+    },
+    {
+      "test": "balanced",
+      "group": "regression",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true,
+      "error": null
+    }
+  ],
+  "reference": [
+    {
+      "test": "empty",
+      "group": "target",
+      "expected": null,
+      "actual": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "test": "positive",
+      "group": "regression",
+      "expected": 3.0,
+      "actual": 3.0,
+      "passed": true,
+      "error": null
+    },
+    {
+      "test": "zero",
+      "group": "regression",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true,
+      "error": null
+    },
+    {
+      "test": "balanced",
+      "group": "regression",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true,
+      "error": null
+    }
+  ],
+  "reviews": {
+    "A": {
+      "schema_valid": true,
+      "semantic_valid": true,
+      "annotations_simulated": {
+        "matches": [
+          "primary_match"
+        ],
+        "c": [
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            1
+          ]
+        ],
+        "s": [
+          1,
+          1,
+          1
+        ],
+        "h": [
+          4,
+          4,
+          3
+        ]
+      },
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "D": 1.0,
+      "C": 1.0,
+      "Q": 1.0,
+      "CCRQS": 1.0,
+      "H": 4,
+      "patches": [
+        {
+          "issue_index": 0,
+          "A": 1,
+          "T": 1,
+          "R": 1.0,
+          "S": 1,
+          "Q": 1.0,
+          "Q_before_expert_annotation": null,
+          "tests": [
+            {
+              "test": "empty",
+              "group": "target",
+              "expected": null,
+              "actual": null,
+              "passed": true,
+              "error": null
+            },
+            {
+              "test": "positive",
+              "group": "regression",
+              "expected": 3.0,
+              "actual": 3.0,
+              "passed": true,
+              "error": null
+            },
+            {
+              "test": "zero",
+              "group": "regression",
+              "expected": 0.0,
+              "actual": 0.0,
+              "passed": true,
+              "error": null
+            },
+            {
+              "test": "balanced",
+              "group": "regression",
+              "expected": 0.0,
+              "actual": 0.0,
+              "passed": true,
+              "error": null
+            }
+          ],
+          "status": "evaluated_with_simulated_expert_scores"
+        }
+      ]
+    },
+    "B": {
+      "schema_valid": true,
+      "semantic_valid": true,
+      "annotations_simulated": {
+        "matches": [
+          "primary_match",
+          "false_positive"
+        ],
+        "c": [
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ]
+        ],
+        "s": [
+          0,
+          0,
+          0.5
+        ],
+        "h": [
+          1,
+          1,
+          2
+        ]
+      },
+      "TP": 1,
+      "FP": 1,
+      "FN": 0,
+      "D": 0.6666666666666666,
+      "C": 0.8333333333333334,
+      "Q": 0.0,
+      "CCRQS": 0.5,
+      "H": 1,
+      "patches": [
+        {
+          "issue_index": 0,
+          "A": 1,
+          "T": 1,
+          "R": 0.3333333333333333,
+          "S": 0,
+          "Q": 0.0,
+          "Q_before_expert_annotation": null,
+          "tests": [
+            {
+              "test": "empty",
+              "group": "target",
+              "expected": null,
+              "actual": null,
+              "passed": true,
+              "error": null
+            },
+            {
+              "test": "positive",
+              "group": "regression",
+              "expected": 3.0,
+              "actual": 3.0,
+              "passed": true,
+              "error": null
+            },
+            {
+              "test": "zero",
+              "group": "regression",
+              "expected": 0.0,
+              "actual": null,
+              "passed": false,
+              "error": null
+            },
+            {
+              "test": "balanced",
+              "group": "regression",
+              "expected": 0.0,
+              "actual": null,
+              "passed": false,
+              "error": null
+            }
+          ],
+          "status": "evaluated_with_simulated_expert_scores"
+        },
+        {
+          "issue_index": 1,
+          "A": null,
+          "T": null,
+          "R": null,
+          "S": null,
+          "Q": 0,
+          "status": "patch_absent"
+        }
+      ]
+    },
+    "C": {
+      "schema_valid": true,
+      "semantic_valid": true,
+      "annotations_simulated": {
+        "matches": [
+          "primary_match"
+        ],
+        "c": [
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            1
+          ]
+        ],
+        "s": null,
+        "h": [
+          2,
+          2,
+          3
+        ]
+      },
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "D": 1.0,
+      "C": 1.0,
+      "Q": 0,
+      "CCRQS": 0.6666666666666666,
+      "H": 2,
+      "patches": [
+        {
+          "issue_index": 0,
+          "A": null,
+          "T": null,
+          "R": null,
+          "S": null,
+          "Q": 0,
+          "status": "patch_absent"
+        }
+      ]
+    },
+    "D": {
+      "schema_valid": true,
+      "semantic_valid": true,
+      "annotations_simulated": {
+        "matches": [],
+        "c": null,
+        "s": null,
+        "h": [
+          0,
+          0,
+          0
+        ]
+      },
+      "TP": 0,
+      "FP": 0,
+      "FN": 1,
+      "D": 0.0,
+      "C": 0,
+      "Q": 0,
+      "CCRQS": 0.0,
+      "H": 0,
+      "patches": []
+    }
+  },
+  "elapsed_seconds": 0.011711200000036115
+}

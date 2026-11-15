@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "file": "python_programs/gcd.py",
+      "line_start": 5,
+      "line_end": 5,
+      "category": "runtime",
+      "severity": "medium",
+      "comment": "Рекурсивный вызов gcd(a % b, b) не уменьшает второй аргумент. Нужно перейти к паре (b, a % b), иначе возникает повтор одного состояния и RecursionError.",
+      "proposed_patch": "--- a/python_programs/gcd.py\n+++ b/python_programs/gcd.py\n@@ -2,7 +2,7 @@\n     if b == 0:\n         return a\n     else:\n-        return gcd(a % b, b)\n+        return gcd(b, a % b)\n \n \n \"\"\"\n",
+      "confidence": 0.85
+    }
+  ]
+}

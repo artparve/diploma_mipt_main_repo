@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "file": "python_programs/mergesort.py",
+      "line_start": 17,
+      "line_end": 17,
+      "category": "runtime",
+      "severity": "medium",
+      "comment": "Список из одного элемента не попадает в базовый случай и снова передаётся в mergesort. Это приводит к RecursionError. Завершайте рекурсию при len(arr) <= 1.",
+      "proposed_patch": "--- a/python_programs/mergesort.py\n+++ b/python_programs/mergesort.py\n@@ -14,7 +14,7 @@\n         result.extend(left[i:] or right[j:])\n         return result\n \n-    if len(arr) == 0:\n+    if len(arr) <= 1:\n         return arr\n     else:\n         middle = len(arr) // 2\n",
+      "confidence": 0.85
+    },
+    {
+      "file": "python_programs/mergesort.py",
+      "line_start": 17,
+      "line_end": 17,
+      "category": "style",
+      "severity": "low",
+      "comment": "Название result слишком общее; переименуйте его в sorted_values для ясности.",
+      "proposed_patch": null,
+      "confidence": 0.8
+    }
+  ]
+}

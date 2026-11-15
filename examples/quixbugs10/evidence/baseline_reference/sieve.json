@@ -1,0 +1,196 @@
+{
+  "buggy": {
+    "status": "ok",
+    "exit_code": 1,
+    "tests": {
+      "test_sieve[input_data0-expected0]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00021879999985685572
+      },
+      "test_sieve[input_data1-expected1]": {
+        "outcome": "failed",
+        "phase": "call",
+        "seconds": 0.0003843000013148412,
+        "detail": "input_data = [2], expected = [2]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_sieve(input_data, expected):\n>       assert sieve(*input_data) == expected\nE       assert [] == [2]\nE         \nE         Right contains one more item: 2\nE         Use -v to get more diff\n\npython_testcases\\test_sieve.py:15: AssertionError"
+      },
+      "test_sieve[input_data2-expected2]": {
+        "outcome": "failed",
+        "phase": "call",
+        "seconds": 0.0003462999993644189,
+        "detail": "input_data = [4], expected = [2, 3]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_sieve(input_data, expected):\n>       assert sieve(*input_data) == expected\nE       assert [] == [2, 3]\nE         \nE         Right contains 2 more items, first extra item: 2\nE         Use -v to get more diff\n\npython_testcases\\test_sieve.py:15: AssertionError"
+      },
+      "test_sieve[input_data3-expected3]": {
+        "outcome": "failed",
+        "phase": "call",
+        "seconds": 0.0002578999992692843,
+        "detail": "input_data = [7], expected = [2, 3, 5, 7]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_sieve(input_data, expected):\n>       assert sieve(*input_data) == expected\nE       assert [] == [2, 3, 5, 7]\nE         \nE         Right contains 4 more items, first extra item: 2\nE         Use -v to get more diff\n\npython_testcases\\test_sieve.py:15: AssertionError"
+      },
+      "test_sieve[input_data4-expected4]": {
+        "outcome": "failed",
+        "phase": "call",
+        "seconds": 0.000225800002226606,
+        "detail": "input_data = [20], expected = [2, 3, 5, 7, 11, 13, ...]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_sieve(input_data, expected):\n>       assert sieve(*input_data) == expected\nE       assert [] == [2, 3, 5, 7, 11, 13, ...]\nE         \nE         Right contains 8 more items, first extra item: 2\nE         Use -v to get more diff\n\npython_testcases\\test_sieve.py:15: AssertionError"
+      },
+      "test_sieve[input_data5-expected5]": {
+        "outcome": "failed",
+        "phase": "call",
+        "seconds": 0.0003192999974999111,
+        "detail": "input_data = [50], expected = [2, 3, 5, 7, 11, 13, ...]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_sieve(input_data, expected):\n>       assert sieve(*input_data) == expected\nE       assert [] == [2, 3, 5, 7, 11, 13, ...]\nE         \nE         Right contains 15 more items, first extra item: 2\nE         Use -v to get more diff\n\npython_testcases\\test_sieve.py:15: AssertionError"
+      }
+    },
+    "collection_errors": [],
+    "seconds": 0.7678300000006857,
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "pytest": "8.3.5",
+    "process_exit_code": 0,
+    "stdout": ".FFFFF                                                                   [100%]\n================================== FAILURES ===================================\n______________________ test_sieve[input_data1-expected1] ______________________\n\ninput_data = [2], expected = [2]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_sieve(input_data, expected):\n>       assert sieve(*input_data) == expected\nE       assert [] == [2]\nE         \nE         Right contains one more item: 2\nE         Use -v to get more diff\n\npython_testcases\\test_sieve.py:15: AssertionError\n______________________ test_sieve[input_data2-expected2] ______________________\n\ninput_data = [4], expected = [2, 3]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_sieve(input_data, expected):\n>       assert sieve(*input_data) == expected\nE       assert [] == [2, 3]\nE         \nE         Right contains 2 more items, first extra item: 2\nE         Use -v to get more diff\n\npython_testcases\\test_sieve.py:15: AssertionError\n______________________ test_sieve[input_data3-expected3] ______________________\n\ninput_data = [7], expected = [2, 3, 5, 7]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_sieve(input_data, expected):\n>       assert sieve(*input_data) == expected\nE       assert [] == [2, 3, 5, 7]\nE         \nE         Right contains 4 more items, first extra item: 2\nE         Use -v to get more diff\n\npython_testcases\\test_sieve.py:15: AssertionError\n______________________ test_sieve[input_data4-expected4] ______________________\n\ninput_data = [20], expected = [2, 3, 5, 7, 11, 13, ...]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_sieve(input_data, expected):\n>       assert sieve(*input_data) == expected\nE       assert [] == [2, 3, 5, 7, 11, 13, ...]\nE         \nE         Right contains 8 more items, first extra item: 2\nE         Use -v to get more diff\n\npython_testcases\\test_sieve.py:15: AssertionError\n______________________ test_sieve[input_data5-expected5] ______________________\n\ninput_data = [50], expected = [2, 3, 5, 7, 11, 13, ...]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_sieve(input_data, expected):\n>       assert sieve(*input_data) == expected\nE       assert [] == [2, 3, 5, 7, 11, 13, ...]\nE         \nE         Right contains 15 more items, first extra item: 2\nE         Use -v to get more diff\n\npython_testcases\\test_sieve.py:15: AssertionError\n=========================== short test summary info ===========================\nFAILED python_testcases/test_sieve.py::test_sieve[input_data1-expected1] - as...\nFAILED python_testcases/test_sieve.py::test_sieve[input_data2-expected2] - as...\nFAILED python_testcases/test_sieve.py::test_sieve[input_data3-expected3] - as...\nFAILED python_testcases/test_sieve.py::test_sieve[input_data4-expected4] - as...\nFAILED python_testcases/test_sieve.py::test_sieve[input_data5-expected5] - as...\n5 failed, 1 passed in 0.68s\n",
+    "stderr": "",
+    "wall_seconds": 1.1358596999998554,
+    "executor": "trusted_local",
+    "attempts": [
+      {
+        "status": "ok",
+        "exit_code": 1,
+        "tests": {
+          "test_sieve[input_data0-expected0]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00021879999985685572
+          },
+          "test_sieve[input_data1-expected1]": {
+            "outcome": "failed",
+            "phase": "call",
+            "seconds": 0.0003843000013148412,
+            "detail": "input_data = [2], expected = [2]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_sieve(input_data, expected):\n>       assert sieve(*input_data) == expected\nE       assert [] == [2]\nE         \nE         Right contains one more item: 2\nE         Use -v to get more diff\n\npython_testcases\\test_sieve.py:15: AssertionError"
+          },
+          "test_sieve[input_data2-expected2]": {
+            "outcome": "failed",
+            "phase": "call",
+            "seconds": 0.0003462999993644189,
+            "detail": "input_data = [4], expected = [2, 3]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_sieve(input_data, expected):\n>       assert sieve(*input_data) == expected\nE       assert [] == [2, 3]\nE         \nE         Right contains 2 more items, first extra item: 2\nE         Use -v to get more diff\n\npython_testcases\\test_sieve.py:15: AssertionError"
+          },
+          "test_sieve[input_data3-expected3]": {
+            "outcome": "failed",
+            "phase": "call",
+            "seconds": 0.0002578999992692843,
+            "detail": "input_data = [7], expected = [2, 3, 5, 7]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_sieve(input_data, expected):\n>       assert sieve(*input_data) == expected\nE       assert [] == [2, 3, 5, 7]\nE         \nE         Right contains 4 more items, first extra item: 2\nE         Use -v to get more diff\n\npython_testcases\\test_sieve.py:15: AssertionError"
+          },
+          "test_sieve[input_data4-expected4]": {
+            "outcome": "failed",
+            "phase": "call",
+            "seconds": 0.000225800002226606,
+            "detail": "input_data = [20], expected = [2, 3, 5, 7, 11, 13, ...]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_sieve(input_data, expected):\n>       assert sieve(*input_data) == expected\nE       assert [] == [2, 3, 5, 7, 11, 13, ...]\nE         \nE         Right contains 8 more items, first extra item: 2\nE         Use -v to get more diff\n\npython_testcases\\test_sieve.py:15: AssertionError"
+          },
+          "test_sieve[input_data5-expected5]": {
+            "outcome": "failed",
+            "phase": "call",
+            "seconds": 0.0003192999974999111,
+            "detail": "input_data = [50], expected = [2, 3, 5, 7, 11, 13, ...]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_sieve(input_data, expected):\n>       assert sieve(*input_data) == expected\nE       assert [] == [2, 3, 5, 7, 11, 13, ...]\nE         \nE         Right contains 15 more items, first extra item: 2\nE         Use -v to get more diff\n\npython_testcases\\test_sieve.py:15: AssertionError"
+          }
+        },
+        "collection_errors": [],
+        "seconds": 0.7678300000006857,
+        "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+        "pytest": "8.3.5",
+        "process_exit_code": 0,
+        "stdout": ".FFFFF                                                                   [100%]\n================================== FAILURES ===================================\n______________________ test_sieve[input_data1-expected1] ______________________\n\ninput_data = [2], expected = [2]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_sieve(input_data, expected):\n>       assert sieve(*input_data) == expected\nE       assert [] == [2]\nE         \nE         Right contains one more item: 2\nE         Use -v to get more diff\n\npython_testcases\\test_sieve.py:15: AssertionError\n______________________ test_sieve[input_data2-expected2] ______________________\n\ninput_data = [4], expected = [2, 3]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_sieve(input_data, expected):\n>       assert sieve(*input_data) == expected\nE       assert [] == [2, 3]\nE         \nE         Right contains 2 more items, first extra item: 2\nE         Use -v to get more diff\n\npython_testcases\\test_sieve.py:15: AssertionError\n______________________ test_sieve[input_data3-expected3] ______________________\n\ninput_data = [7], expected = [2, 3, 5, 7]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_sieve(input_data, expected):\n>       assert sieve(*input_data) == expected\nE       assert [] == [2, 3, 5, 7]\nE         \nE         Right contains 4 more items, first extra item: 2\nE         Use -v to get more diff\n\npython_testcases\\test_sieve.py:15: AssertionError\n______________________ test_sieve[input_data4-expected4] ______________________\n\ninput_data = [20], expected = [2, 3, 5, 7, 11, 13, ...]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_sieve(input_data, expected):\n>       assert sieve(*input_data) == expected\nE       assert [] == [2, 3, 5, 7, 11, 13, ...]\nE         \nE         Right contains 8 more items, first extra item: 2\nE         Use -v to get more diff\n\npython_testcases\\test_sieve.py:15: AssertionError\n______________________ test_sieve[input_data5-expected5] ______________________\n\ninput_data = [50], expected = [2, 3, 5, 7, 11, 13, ...]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_sieve(input_data, expected):\n>       assert sieve(*input_data) == expected\nE       assert [] == [2, 3, 5, 7, 11, 13, ...]\nE         \nE         Right contains 15 more items, first extra item: 2\nE         Use -v to get more diff\n\npython_testcases\\test_sieve.py:15: AssertionError\n=========================== short test summary info ===========================\nFAILED python_testcases/test_sieve.py::test_sieve[input_data1-expected1] - as...\nFAILED python_testcases/test_sieve.py::test_sieve[input_data2-expected2] - as...\nFAILED python_testcases/test_sieve.py::test_sieve[input_data3-expected3] - as...\nFAILED python_testcases/test_sieve.py::test_sieve[input_data4-expected4] - as...\nFAILED python_testcases/test_sieve.py::test_sieve[input_data5-expected5] - as...\n5 failed, 1 passed in 0.68s\n",
+        "stderr": "",
+        "wall_seconds": 1.1358596999998554,
+        "executor": "trusted_local"
+      }
+    ]
+  },
+  "reference": {
+    "status": "ok",
+    "exit_code": 0,
+    "tests": {
+      "test_sieve[input_data0-expected0]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00013860000035492703
+      },
+      "test_sieve[input_data1-expected1]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.0001205000007757917
+      },
+      "test_sieve[input_data2-expected2]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00013490000128513202
+      },
+      "test_sieve[input_data3-expected3]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00014310000187833793
+      },
+      "test_sieve[input_data4-expected4]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.0001388000018778257
+      },
+      "test_sieve[input_data5-expected5]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00012799999967683107
+      }
+    },
+    "collection_errors": [],
+    "seconds": 0.14421840000068187,
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "pytest": "8.3.5",
+    "process_exit_code": 0,
+    "stdout": "......                                                                   [100%]\n6 passed in 0.05s\n",
+    "stderr": "",
+    "wall_seconds": 0.549357300002157,
+    "executor": "trusted_local",
+    "attempts": [
+      {
+        "status": "ok",
+        "exit_code": 0,
+        "tests": {
+          "test_sieve[input_data0-expected0]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00013860000035492703
+          },
+          "test_sieve[input_data1-expected1]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.0001205000007757917
+          },
+          "test_sieve[input_data2-expected2]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00013490000128513202
+          },
+          "test_sieve[input_data3-expected3]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00014310000187833793
+          },
+          "test_sieve[input_data4-expected4]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.0001388000018778257
+          },
+          "test_sieve[input_data5-expected5]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00012799999967683107
+          }
+        },
+        "collection_errors": [],
+        "seconds": 0.14421840000068187,
+        "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+        "pytest": "8.3.5",
+        "process_exit_code": 0,
+        "stdout": "......                                                                   [100%]\n6 passed in 0.05s\n",
+        "stderr": "",
+        "wall_seconds": 0.549357300002157,
+        "executor": "trusted_local"
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "file": "python_programs/levenshtein.py",
+      "line_start": 6,
+      "line_end": 6,
+      "category": "functional",
+      "severity": "medium",
+      "comment": "При source[0] == target[0] не требуется операция редактирования, однако код добавляет 1. Уберите прибавление в этой ветке; для несовпадающих символов стоимость 1 сохраните.",
+      "proposed_patch": "--- a/python_programs/levenshtein.py\n+++ b/python_programs/levenshtein.py\n@@ -3,7 +3,7 @@\n         return len(source) or len(target)\n \n     elif source[0] == target[0]:\n-        return 1 + levenshtein(source[1:], target[1:])\n+        return levenshtein(source[1:], target[1:])\n \n     else:\n         return 1 + min(\n",
+      "confidence": 0.85
+    }
+  ]
+}

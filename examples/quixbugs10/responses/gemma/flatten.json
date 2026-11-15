@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "file": "python_programs/flatten.py",
+      "line_start": 7,
+      "line_end": 7,
+      "category": "functional",
+      "severity": "medium",
+      "comment": "В ветке else yield flatten(x) выдаёт объект генератора вместо исходного элемента. Для скалярного x следует выдавать сам x, иначе результат не является плоским списком.",
+      "proposed_patch": "--- a/python_programs/flatten.py\n+++ b/python_programs/flatten.py\n@@ -4,7 +4,7 @@\n             for y in flatten(x):\n                 yield y\n         else:\n-            yield flatten(x)\n+            yield from flatten(x)\n \n \n \n",
+      "confidence": 0.85
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "source_files": [
+    {
+      "path": "src/math_utils.py",
+      "content": "def average(values):\n    return sum(values) / len(values)\n"
+    }
+  ],
+  "allowed_context": "Для непустого списка чисел вернуть среднее, включая отрицательные числа; для пустого списка вызвать ValueError.",
+  "primary_defect": {
+    "defect_id": "defect-demo-001",
+    "file": "src/math_utils.py",
+    "line_start": 2,
+    "line_end": 2,
+    "category": "runtime",
+    "description": "Пустой список вызывает ZeroDivisionError вместо предусмотренного ValueError.",
+    "trigger": "average([])",
+    "expected": "ValueError",
+    "observed": "ZeroDivisionError"
+  },
+  "comments": [
+    {
+      "file": "src/math_utils.py",
+      "line_start": 2,
+      "line_end": 2,
+      "comment": "При values=[] знаменатель len(values) равен нулю, поэтому строка 2 вызывает ZeroDivisionError. Обработайте пустой список до деления."
+    }
+  ]
+}

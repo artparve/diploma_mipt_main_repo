@@ -1,0 +1,1650 @@
+{
+  "provenance_ref": "data_origin.json",
+  "records": [
+    {
+      "review_id": "gcd__gemma",
+      "case_id": "gcd",
+      "model_key": "gemma",
+      "response_group": "Gemma",
+      "response_file": "responses/gemma/gcd.json",
+      "execution_file": "evidence/patches/gemma/gcd/execution.json",
+      "source_sha256": "5a11580ba4845b6bae20c49b31eed14eb7bfedb7870550f6b752b41eabf03b4c",
+      "response": {
+        "schema_version": "1.0",
+        "issues": [
+          {
+            "file": "python_programs/gcd.py",
+            "line_start": 5,
+            "line_end": 5,
+            "category": "runtime",
+            "severity": "medium",
+            "comment": "В рекурсивной ветке b остаётся тем же. После первого шага остаток может быть меньше b, и вызов повторяется бесконечно. Для алгоритма Евклида передавайте gcd(b, a % b).",
+            "proposed_patch": "--- a/python_programs/gcd.py\n+++ b/python_programs/gcd.py\n@@ -2,7 +2,7 @@\n     if b == 0:\n         return a\n     else:\n-        return gcd(a % b, b)\n+        return gcd(b, a % b)\n \n \n \"\"\"\n",
+            "confidence": 0.85
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "review_id": "gcd__gemma",
+          "case_id": "gcd",
+          "response_group": "Gemma",
+          "expert_id": "E1",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            2
+          ],
+          "patch_meaning_score": 1,
+          "explanation": "Ошибка и место определены верно, исправление восстанавливает алгоритм Евклида.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        },
+        {
+          "review_id": "gcd__gemma",
+          "case_id": "gcd",
+          "response_group": "Gemma",
+          "expert_id": "E2",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            1
+          ],
+          "patch_meaning_score": 1,
+          "explanation": "Исправление корректно; в комментарии полезно привести конкретный пример зацикливания.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        }
+      ],
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "D": 1.0,
+      "C": 0.9166666666666666,
+      "comment_medians": [
+        2.0,
+        2.0,
+        1.5
+      ],
+      "A": 1,
+      "T": 1,
+      "R": 1.0,
+      "S": 1.0,
+      "Q": 1.0,
+      "CCRQS": 0.9722222222222221,
+      "provenance_ref": "data_origin.json",
+      "synthetic": true,
+      "real_model_called": false
+    },
+    {
+      "review_id": "gcd__qwen_coder",
+      "case_id": "gcd",
+      "model_key": "qwen_coder",
+      "response_group": "Qwen-Coder",
+      "response_file": "responses/qwen_coder/gcd.json",
+      "execution_file": "evidence/patches/qwen_coder/gcd/execution.json",
+      "source_sha256": "5a11580ba4845b6bae20c49b31eed14eb7bfedb7870550f6b752b41eabf03b4c",
+      "response": {
+        "schema_version": "1.0",
+        "issues": [
+          {
+            "file": "python_programs/gcd.py",
+            "line_start": 5,
+            "line_end": 5,
+            "category": "runtime",
+            "severity": "medium",
+            "comment": "Рекурсивный вызов gcd(a % b, b) не уменьшает второй аргумент. Нужно перейти к паре (b, a % b), иначе возникает повтор одного состояния и RecursionError.",
+            "proposed_patch": "--- a/python_programs/gcd.py\n+++ b/python_programs/gcd.py\n@@ -2,7 +2,7 @@\n     if b == 0:\n         return a\n     else:\n-        return gcd(a % b, b)\n+        return gcd(b, a % b)\n \n \n \"\"\"\n",
+            "confidence": 0.85
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "review_id": "gcd__qwen_coder",
+          "case_id": "gcd",
+          "response_group": "Qwen-Coder",
+          "expert_id": "E1",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            2
+          ],
+          "patch_meaning_score": 1,
+          "explanation": "Точная локализация, причина и корректное действие.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        },
+        {
+          "review_id": "gcd__qwen_coder",
+          "case_id": "gcd",
+          "response_group": "Qwen-Coder",
+          "expert_id": "E2",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            2
+          ],
+          "patch_meaning_score": 1,
+          "explanation": "Минимальный patch восстанавливает завершение рекурсии.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        }
+      ],
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "D": 1.0,
+      "C": 1.0,
+      "comment_medians": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "A": 1,
+      "T": 1,
+      "R": 1.0,
+      "S": 1.0,
+      "Q": 1.0,
+      "CCRQS": 1.0,
+      "provenance_ref": "data_origin.json",
+      "synthetic": true,
+      "real_model_called": false
+    },
+    {
+      "review_id": "find_in_sorted__gemma",
+      "case_id": "find_in_sorted",
+      "model_key": "gemma",
+      "response_group": "Gemma",
+      "response_file": "responses/gemma/find_in_sorted.json",
+      "execution_file": null,
+      "source_sha256": "71234198a0556c633f259bb3315123d14ca0fb0c77eda10fcf7cd7a4ce3e8091",
+      "response": {
+        "schema_version": "1.0",
+        "issues": [
+          {
+            "file": "python_programs/find_in_sorted.py",
+            "line_start": 9,
+            "line_end": 9,
+            "category": "runtime",
+            "severity": "medium",
+            "comment": "При поиске справа диапазон может не уменьшаться, потому что mid повторно попадает в рекурсивный вызов. Из-за этого возможна бесконечная рекурсия. Следует сдвинуть левую границу.",
+            "proposed_patch": null,
+            "confidence": 0.85
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "review_id": "find_in_sorted__gemma",
+          "case_id": "find_in_sorted",
+          "response_group": "Gemma",
+          "expert_id": "E1",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            1
+          ],
+          "patch_meaning_score": null,
+          "explanation": "Дефект найден, но готового исправления нет.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        },
+        {
+          "review_id": "find_in_sorted__gemma",
+          "case_id": "find_in_sorted",
+          "response_group": "Gemma",
+          "expert_id": "E2",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            1,
+            1
+          ],
+          "patch_meaning_score": null,
+          "explanation": "Направление верное, однако точная граница mid + 1 не указана и patch отсутствует.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        }
+      ],
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "D": 1.0,
+      "C": 0.75,
+      "comment_medians": [
+        2.0,
+        1.5,
+        1.0
+      ],
+      "A": null,
+      "T": null,
+      "R": null,
+      "S": null,
+      "Q": 0,
+      "CCRQS": 0.5833333333333333,
+      "provenance_ref": "data_origin.json",
+      "synthetic": true,
+      "real_model_called": false
+    },
+    {
+      "review_id": "find_in_sorted__qwen_coder",
+      "case_id": "find_in_sorted",
+      "model_key": "qwen_coder",
+      "response_group": "Qwen-Coder",
+      "response_file": "responses/qwen_coder/find_in_sorted.json",
+      "execution_file": "evidence/patches/qwen_coder/find_in_sorted/execution.json",
+      "source_sha256": "71234198a0556c633f259bb3315123d14ca0fb0c77eda10fcf7cd7a4ce3e8091",
+      "response": {
+        "schema_version": "1.0",
+        "issues": [
+          {
+            "file": "python_programs/find_in_sorted.py",
+            "line_start": 9,
+            "line_end": 9,
+            "category": "runtime",
+            "severity": "medium",
+            "comment": "Правая ветка вызывает binsearch(mid, end), сохраняя уже проверенный индекс. Если mid == start, интервал не сокращается. Замените на binsearch(mid + 1, end), сохранив полуинтервал [start, end).",
+            "proposed_patch": "--- a/python_programs/find_in_sorted.py\n+++ b/python_programs/find_in_sorted.py\n@@ -6,7 +6,7 @@\n         if x < arr[mid]:\n             return binsearch(start, mid)\n         elif x > arr[mid]:\n-            return binsearch(mid, end)\n+            return binsearch(mid + 1, end)\n         else:\n             return mid\n \n",
+            "confidence": 0.85
+          },
+          {
+            "file": "python_programs/find_in_sorted.py",
+            "line_start": 9,
+            "line_end": 9,
+            "category": "runtime",
+            "severity": "low",
+            "comment": "Если искомого значения нет справа, mid может повторяться и функция зациклится. Исключите mid из нового диапазона.",
+            "proposed_patch": null,
+            "confidence": 0.8
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "review_id": "find_in_sorted__qwen_coder",
+          "case_id": "find_in_sorted",
+          "response_group": "Qwen-Coder",
+          "expert_id": "E1",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match",
+            "duplicate_primary"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            2
+          ],
+          "patch_meaning_score": 1,
+          "explanation": "Основное замечание и patch верны, но второе повторяет ту же ошибку.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        },
+        {
+          "review_id": "find_in_sorted__qwen_coder",
+          "case_id": "find_in_sorted",
+          "response_group": "Qwen-Coder",
+          "expert_id": "E2",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match",
+            "duplicate_primary"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            2
+          ],
+          "patch_meaning_score": 1,
+          "explanation": "Повтор не является вторым обнаруженным дефектом; один duplicate_primary.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        }
+      ],
+      "TP": 1,
+      "FP": 1,
+      "FN": 0,
+      "D": 0.6666666666666666,
+      "C": 1.0,
+      "comment_medians": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "A": 1,
+      "T": 1,
+      "R": 1.0,
+      "S": 1.0,
+      "Q": 1.0,
+      "CCRQS": 0.8888888888888888,
+      "provenance_ref": "data_origin.json",
+      "synthetic": true,
+      "real_model_called": false
+    },
+    {
+      "review_id": "quicksort__gemma",
+      "case_id": "quicksort",
+      "model_key": "gemma",
+      "response_group": "Gemma",
+      "response_file": "responses/gemma/quicksort.json",
+      "execution_file": "evidence/patches/gemma/quicksort/execution.json",
+      "source_sha256": "4542a622e7b2d1fc6963e32f1fc647f963758b407a36f962e517ffa70d9a9fa8",
+      "response": {
+        "schema_version": "1.0",
+        "issues": [
+          {
+            "file": "python_programs/quicksort.py",
+            "line_start": 7,
+            "line_end": 7,
+            "category": "functional",
+            "severity": "medium",
+            "comment": "Оба списка исключают элементы, равные pivot, поэтому сортировка теряет дубликаты. Разрешите равенство в одной из частей, чтобы сохранить элементы.",
+            "proposed_patch": "--- a/python_programs/quicksort.py\n+++ b/python_programs/quicksort.py\n@@ -3,8 +3,8 @@\n         return []\n \n     pivot = arr[0]\n-    lesser = quicksort([x for x in arr[1:] if x < pivot])\n-    greater = quicksort([x for x in arr[1:] if x > pivot])\n+    lesser = quicksort([x for x in arr[1:] if x <= pivot])\n+    greater = quicksort([x for x in arr[1:] if x >= pivot])\n     return lesser + [pivot] + greater\n \n \"\"\"\n",
+            "confidence": 0.85
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "review_id": "quicksort__gemma",
+          "case_id": "quicksort",
+          "response_group": "Gemma",
+          "expert_id": "E1",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            1
+          ],
+          "patch_meaning_score": null,
+          "explanation": "Причина найдена. Но patch включает равные элементы сразу в обе части и размножает их.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        },
+        {
+          "review_id": "quicksort__gemma",
+          "case_id": "quicksort",
+          "response_group": "Gemma",
+          "expert_id": "E2",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            2
+          ],
+          "patch_meaning_score": null,
+          "explanation": "Комментарий верный, а diff ему противоречит: равенство добавлено в две ветки вместо одной.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        }
+      ],
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "D": 1.0,
+      "C": 0.9166666666666666,
+      "comment_medians": [
+        2.0,
+        2.0,
+        1.5
+      ],
+      "A": 1,
+      "T": 0,
+      "R": 1.0,
+      "S": null,
+      "Q": 0,
+      "CCRQS": 0.6388888888888888,
+      "provenance_ref": "data_origin.json",
+      "synthetic": true,
+      "real_model_called": false
+    },
+    {
+      "review_id": "quicksort__qwen_coder",
+      "case_id": "quicksort",
+      "model_key": "qwen_coder",
+      "response_group": "Qwen-Coder",
+      "response_file": "responses/qwen_coder/quicksort.json",
+      "execution_file": "evidence/patches/qwen_coder/quicksort/execution.json",
+      "source_sha256": "4542a622e7b2d1fc6963e32f1fc647f963758b407a36f962e517ffa70d9a9fa8",
+      "response": {
+        "schema_version": "1.0",
+        "issues": [
+          {
+            "file": "python_programs/quicksort.py",
+            "line_start": 7,
+            "line_end": 7,
+            "category": "functional",
+            "severity": "medium",
+            "comment": "Элементы arr[1:], равные pivot, не попадают ни в lesser, ни в greater. Например, [2, 2, 1] теряет одну двойку. Замените условие greater на x >= pivot; pivot по-прежнему добавляется один раз.",
+            "proposed_patch": "--- a/python_programs/quicksort.py\n+++ b/python_programs/quicksort.py\n@@ -4,7 +4,7 @@\n \n     pivot = arr[0]\n     lesser = quicksort([x for x in arr[1:] if x < pivot])\n-    greater = quicksort([x for x in arr[1:] if x > pivot])\n+    greater = quicksort([x for x in arr[1:] if x >= pivot])\n     return lesser + [pivot] + greater\n \n \"\"\"\n",
+            "confidence": 0.85
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "review_id": "quicksort__qwen_coder",
+          "case_id": "quicksort",
+          "response_group": "Qwen-Coder",
+          "expert_id": "E1",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            2
+          ],
+          "patch_meaning_score": 1,
+          "explanation": "Есть конкретный пример и точное минимальное исправление.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        },
+        {
+          "review_id": "quicksort__qwen_coder",
+          "case_id": "quicksort",
+          "response_group": "Qwen-Coder",
+          "expert_id": "E2",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            2
+          ],
+          "patch_meaning_score": 1,
+          "explanation": "Дубликаты сохраняются, а разбиение остаётся взаимоисключающим.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        }
+      ],
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "D": 1.0,
+      "C": 1.0,
+      "comment_medians": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "A": 1,
+      "T": 1,
+      "R": 1.0,
+      "S": 1.0,
+      "Q": 1.0,
+      "CCRQS": 1.0,
+      "provenance_ref": "data_origin.json",
+      "synthetic": true,
+      "real_model_called": false
+    },
+    {
+      "review_id": "mergesort__gemma",
+      "case_id": "mergesort",
+      "model_key": "gemma",
+      "response_group": "Gemma",
+      "response_file": "responses/gemma/mergesort.json",
+      "execution_file": "evidence/patches/gemma/mergesort/execution.json",
+      "source_sha256": "bc6b0977582bb394187dd3418f94811e2bc4cc9bd675b9410baf336a833389a6",
+      "response": {
+        "schema_version": "1.0",
+        "issues": [
+          {
+            "file": "python_programs/mergesort.py",
+            "line_start": 17,
+            "line_end": 17,
+            "category": "runtime",
+            "severity": "medium",
+            "comment": "Список из одного элемента не попадает в базовый случай и снова передаётся в mergesort. Это приводит к RecursionError. Завершайте рекурсию при len(arr) <= 1.",
+            "proposed_patch": "--- a/python_programs/mergesort.py\n+++ b/python_programs/mergesort.py\n@@ -14,7 +14,7 @@\n         result.extend(left[i:] or right[j:])\n         return result\n \n-    if len(arr) == 0:\n+    if len(arr) <= 1:\n         return arr\n     else:\n         middle = len(arr) // 2\n",
+            "confidence": 0.85
+          },
+          {
+            "file": "python_programs/mergesort.py",
+            "line_start": 17,
+            "line_end": 17,
+            "category": "style",
+            "severity": "low",
+            "comment": "Название result слишком общее; переименуйте его в sorted_values для ясности.",
+            "proposed_patch": null,
+            "confidence": 0.8
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "review_id": "mergesort__gemma",
+          "case_id": "mergesort",
+          "response_group": "Gemma",
+          "expert_id": "E1",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match",
+            "out_of_scope"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            2
+          ],
+          "patch_meaning_score": 1,
+          "explanation": "Основной дефект исправлен; второе замечание только о стиле и вне задания.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        },
+        {
+          "review_id": "mergesort__gemma",
+          "case_id": "mergesort",
+          "response_group": "Gemma",
+          "expert_id": "E2",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match",
+            "out_of_scope"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            1
+          ],
+          "patch_meaning_score": 1,
+          "explanation": "Рабочий patch, но лишнее стилевое замечание снижает точность обнаружения.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        }
+      ],
+      "TP": 1,
+      "FP": 1,
+      "FN": 0,
+      "D": 0.6666666666666666,
+      "C": 0.9166666666666666,
+      "comment_medians": [
+        2.0,
+        2.0,
+        1.5
+      ],
+      "A": 1,
+      "T": 1,
+      "R": 1.0,
+      "S": 1.0,
+      "Q": 1.0,
+      "CCRQS": 0.8611111111111109,
+      "provenance_ref": "data_origin.json",
+      "synthetic": true,
+      "real_model_called": false
+    },
+    {
+      "review_id": "mergesort__qwen_coder",
+      "case_id": "mergesort",
+      "model_key": "qwen_coder",
+      "response_group": "Qwen-Coder",
+      "response_file": "responses/qwen_coder/mergesort.json",
+      "execution_file": "evidence/patches/qwen_coder/mergesort/execution.json",
+      "source_sha256": "bc6b0977582bb394187dd3418f94811e2bc4cc9bd675b9410baf336a833389a6",
+      "response": {
+        "schema_version": "1.0",
+        "issues": [
+          {
+            "file": "python_programs/mergesort.py",
+            "line_start": 17,
+            "line_end": 17,
+            "category": "runtime",
+            "severity": "medium",
+            "comment": "Условие len(arr) == 0 не останавливает рекурсию на одном элементе. Для списка длины 1 правая часть повторяет исходный список. Базовый случай должен включать длину 1.",
+            "proposed_patch": "--- a/python_programs/mergesort.py\n+++ b/python_programs/mergesort.py\n@@ -14,7 +14,7 @@\n         result.extend(left[i:] or right[j:])\n         return result\n \n-    if len(arr) == 0:\n+    if len(arr) <= 2:\n         return arr\n     else:\n         middle = len(arr) // 2\n",
+            "confidence": 0.85
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "review_id": "mergesort__qwen_coder",
+          "case_id": "mergesort",
+          "response_group": "Qwen-Coder",
+          "expert_id": "E1",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            2
+          ],
+          "patch_meaning_score": null,
+          "explanation": "Ошибка названа верно, но возврат несортированного списка длины 2 ломает алгоритм.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        },
+        {
+          "review_id": "mergesort__qwen_coder",
+          "case_id": "mergesort",
+          "response_group": "Qwen-Coder",
+          "expert_id": "E2",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            1
+          ],
+          "patch_meaning_score": null,
+          "explanation": "Patch чрезмерно расширяет базовый случай; [2, 1] остаётся несортированным.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        }
+      ],
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "D": 1.0,
+      "C": 0.9166666666666666,
+      "comment_medians": [
+        2.0,
+        2.0,
+        1.5
+      ],
+      "A": 1,
+      "T": 0,
+      "R": 1.0,
+      "S": null,
+      "Q": 0,
+      "CCRQS": 0.6388888888888888,
+      "provenance_ref": "data_origin.json",
+      "synthetic": true,
+      "real_model_called": false
+    },
+    {
+      "review_id": "sieve__gemma",
+      "case_id": "sieve",
+      "model_key": "gemma",
+      "response_group": "Gemma",
+      "response_file": "responses/gemma/sieve.json",
+      "execution_file": null,
+      "source_sha256": "570704d5faf58d0fd702aa2278b3bd43bc52b53183b4f8193acd39c11d049807",
+      "response": {
+        "schema_version": "1.0",
+        "issues": []
+      },
+      "annotations": [
+        {
+          "review_id": "sieve__gemma",
+          "case_id": "sieve",
+          "response_group": "Gemma",
+          "expert_id": "E1",
+          "synthetic": true,
+          "issue_labels": [],
+          "comment_scores": null,
+          "patch_meaning_score": null,
+          "explanation": "Основная ошибка не замечена; список issues пуст.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        },
+        {
+          "review_id": "sieve__gemma",
+          "case_id": "sieve",
+          "response_group": "Gemma",
+          "expert_id": "E2",
+          "synthetic": true,
+          "issue_labels": [],
+          "comment_scores": null,
+          "patch_meaning_score": null,
+          "explanation": "Полезного ревью нет: any на пустом списке блокирует добавление первого простого числа.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        }
+      ],
+      "TP": 0,
+      "FP": 0,
+      "FN": 1,
+      "D": 0.0,
+      "C": 0,
+      "comment_medians": null,
+      "A": null,
+      "T": null,
+      "R": null,
+      "S": null,
+      "Q": 0,
+      "CCRQS": 0.0,
+      "provenance_ref": "data_origin.json",
+      "synthetic": true,
+      "real_model_called": false
+    },
+    {
+      "review_id": "sieve__qwen_coder",
+      "case_id": "sieve",
+      "model_key": "qwen_coder",
+      "response_group": "Qwen-Coder",
+      "response_file": "responses/qwen_coder/sieve.json",
+      "execution_file": "evidence/patches/qwen_coder/sieve/execution.json",
+      "source_sha256": "570704d5faf58d0fd702aa2278b3bd43bc52b53183b4f8193acd39c11d049807",
+      "response": {
+        "schema_version": "1.0",
+        "issues": [
+          {
+            "file": "python_programs/sieve.py",
+            "line_start": 4,
+            "line_end": 4,
+            "category": "functional",
+            "severity": "medium",
+            "comment": "any по пустому primes возвращает False, поэтому число 2 не добавляется. Кроме того, для простого числа нужно отсутствие любого делителя. Проверяйте все ранее найденные простые числа.",
+            "proposed_patch": "--- a/python_programs/sieve.py\n+++ b/python_programs/sieve.py\n@@ -1,7 +1,7 @@\n def sieve(max):\n     primes = []\n     for n in range(2, max + 1):\n-        if any(n % p > 0 for p in primes):\n+        if not primes or any(n % p > 0 for p in primes):\n             primes.append(n)\n     return primes\n \n",
+            "confidence": 0.85
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "review_id": "sieve__qwen_coder",
+          "case_id": "sieve",
+          "response_group": "Qwen-Coder",
+          "expert_id": "E1",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            1
+          ],
+          "patch_meaning_score": null,
+          "explanation": "Причина остановки найдена, но patch лечит лишь пустой список и сохраняет неверное any.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        },
+        {
+          "review_id": "sieve__qwen_coder",
+          "case_id": "sieve",
+          "response_group": "Qwen-Coder",
+          "expert_id": "E2",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            2
+          ],
+          "patch_meaning_score": null,
+          "explanation": "Составные числа с некоторыми неделящими их простыми ошибочно добавляются, например 4.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        }
+      ],
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "D": 1.0,
+      "C": 0.9166666666666666,
+      "comment_medians": [
+        2.0,
+        2.0,
+        1.5
+      ],
+      "A": 1,
+      "T": 0,
+      "R": 1.0,
+      "S": null,
+      "Q": 0,
+      "CCRQS": 0.6388888888888888,
+      "provenance_ref": "data_origin.json",
+      "synthetic": true,
+      "real_model_called": false
+    },
+    {
+      "review_id": "flatten__gemma",
+      "case_id": "flatten",
+      "model_key": "gemma",
+      "response_group": "Gemma",
+      "response_file": "responses/gemma/flatten.json",
+      "execution_file": "evidence/patches/gemma/flatten/execution.json",
+      "source_sha256": "f6f5a5f9442e63245dc593955467da427308e2c66f84351fff1f27cd3a136780",
+      "response": {
+        "schema_version": "1.0",
+        "issues": [
+          {
+            "file": "python_programs/flatten.py",
+            "line_start": 7,
+            "line_end": 7,
+            "category": "functional",
+            "severity": "medium",
+            "comment": "В ветке else yield flatten(x) выдаёт объект генератора вместо исходного элемента. Для скалярного x следует выдавать сам x, иначе результат не является плоским списком.",
+            "proposed_patch": "--- a/python_programs/flatten.py\n+++ b/python_programs/flatten.py\n@@ -4,7 +4,7 @@\n             for y in flatten(x):\n                 yield y\n         else:\n-            yield flatten(x)\n+            yield from flatten(x)\n \n \n \n",
+            "confidence": 0.85
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "review_id": "flatten__gemma",
+          "case_id": "flatten",
+          "response_group": "Gemma",
+          "expert_id": "E1",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            2
+          ],
+          "patch_meaning_score": null,
+          "explanation": "Описание дефекта верное, однако yield from пытается рекурсивно обходить скаляр и вызывает TypeError.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        },
+        {
+          "review_id": "flatten__gemma",
+          "case_id": "flatten",
+          "response_group": "Gemma",
+          "expert_id": "E2",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            1
+          ],
+          "patch_meaning_score": null,
+          "explanation": "Комментарий предлагает yield x, а предложенный diff делает другое.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        }
+      ],
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "D": 1.0,
+      "C": 0.9166666666666666,
+      "comment_medians": [
+        2.0,
+        2.0,
+        1.5
+      ],
+      "A": 1,
+      "T": 0,
+      "R": 1.0,
+      "S": null,
+      "Q": 0,
+      "CCRQS": 0.6388888888888888,
+      "provenance_ref": "data_origin.json",
+      "synthetic": true,
+      "real_model_called": false
+    },
+    {
+      "review_id": "flatten__qwen_coder",
+      "case_id": "flatten",
+      "model_key": "qwen_coder",
+      "response_group": "Qwen-Coder",
+      "response_file": "responses/qwen_coder/flatten.json",
+      "execution_file": "evidence/patches/qwen_coder/flatten/execution.json",
+      "source_sha256": "f6f5a5f9442e63245dc593955467da427308e2c66f84351fff1f27cd3a136780",
+      "response": {
+        "schema_version": "1.0",
+        "issues": [
+          {
+            "file": "python_programs/flatten.py",
+            "line_start": 7,
+            "line_end": 7,
+            "category": "functional",
+            "severity": "medium",
+            "comment": "В else выдаётся flatten(x), то есть генератор, хотя x уже является не-списочным конечным элементом. Замените на yield x. Тогда list(flatten([1, [2]])) вернёт [1, 2].",
+            "proposed_patch": "--- a/python_programs/flatten.py\n+++ b/python_programs/flatten.py\n@@ -4,7 +4,7 @@\n             for y in flatten(x):\n                 yield y\n         else:\n-            yield flatten(x)\n+            yield x\n \n \n \n",
+            "confidence": 0.85
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "review_id": "flatten__qwen_coder",
+          "case_id": "flatten",
+          "response_group": "Qwen-Coder",
+          "expert_id": "E1",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            2
+          ],
+          "patch_meaning_score": 1,
+          "explanation": "Верно объяснена разница между выдачей элемента и генератора.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        },
+        {
+          "review_id": "flatten__qwen_coder",
+          "case_id": "flatten",
+          "response_group": "Qwen-Coder",
+          "expert_id": "E2",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            2
+          ],
+          "patch_meaning_score": 1,
+          "explanation": "Исправление соответствует контракту произвольных не-списочных объектов.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        }
+      ],
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "D": 1.0,
+      "C": 1.0,
+      "comment_medians": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "A": 1,
+      "T": 1,
+      "R": 1.0,
+      "S": 1.0,
+      "Q": 1.0,
+      "CCRQS": 1.0,
+      "provenance_ref": "data_origin.json",
+      "synthetic": true,
+      "real_model_called": false
+    },
+    {
+      "review_id": "is_valid_parenthesization__gemma",
+      "case_id": "is_valid_parenthesization",
+      "model_key": "gemma",
+      "response_group": "Gemma",
+      "response_file": "responses/gemma/is_valid_parenthesization.json",
+      "execution_file": "evidence/patches/gemma/is_valid_parenthesization/execution.json",
+      "source_sha256": "10f82dd99219c3653aa0243f52b42f03a334e3af7bf38c5bc255d98bf91d6d55",
+      "response": {
+        "schema_version": "1.0",
+        "issues": [
+          {
+            "file": "python_programs/is_valid_parenthesization.py",
+            "line_start": 12,
+            "line_end": 12,
+            "category": "functional",
+            "severity": "medium",
+            "comment": "В конце возвращается True даже при незакрытых открывающих скобках. Нужно убедиться, что скобки сбалансированы к окончанию обхода.",
+            "proposed_patch": "--- a/python_programs/is_valid_parenthesization.py\n+++ b/python_programs/is_valid_parenthesization.py\n@@ -1,31 +1,2 @@\n-\n def is_valid_parenthesization(parens):\n-    depth = 0\n-    for paren in parens:\n-        if paren == '(':\n-            depth += 1\n-        else:\n-            depth -= 1\n-            if depth < 0:\n-                return False\n-\n-    return True\n-\n-\n-\"\"\"\n-Nested Parens\n-Input:\n-    parens: A string of parentheses\n-\n-Precondition:\n-    all(paren in '()' for paren in parens)\n-\n-Output:\n-    Whether the parentheses are properly nested\n-\n-Examples:\n-    >>> is_valid_parenthesization('((()()))()')\n-    True\n-    >>> is_valid_parenthesization(')()(')\n-    False\n-\"\"\"\n+    return parens.count('(') == parens.count(')')\n",
+            "confidence": 0.85
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "review_id": "is_valid_parenthesization__gemma",
+          "case_id": "is_valid_parenthesization",
+          "response_group": "Gemma",
+          "expert_id": "E1",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            1
+          ],
+          "patch_meaning_score": 0,
+          "explanation": "Количество открывающих и закрывающих скобок совпадать должно, но этого недостаточно: порядок теряется.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        },
+        {
+          "review_id": "is_valid_parenthesization__gemma",
+          "case_id": "is_valid_parenthesization",
+          "response_group": "Gemma",
+          "expert_id": "E2",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            1
+          ],
+          "patch_meaning_score": 0.5,
+          "explanation": "Частично решён исходный случай, однако строка )()( ошибочно принимается. Исправление требует доработки.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        }
+      ],
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "D": 1.0,
+      "C": 0.8333333333333334,
+      "comment_medians": [
+        2.0,
+        2.0,
+        1.0
+      ],
+      "A": 1,
+      "T": 1,
+      "R": 0.5,
+      "S": 0.25,
+      "Q": 0.125,
+      "CCRQS": 0.6527777777777778,
+      "provenance_ref": "data_origin.json",
+      "synthetic": true,
+      "real_model_called": false
+    },
+    {
+      "review_id": "is_valid_parenthesization__qwen_coder",
+      "case_id": "is_valid_parenthesization",
+      "model_key": "qwen_coder",
+      "response_group": "Qwen-Coder",
+      "response_file": "responses/qwen_coder/is_valid_parenthesization.json",
+      "execution_file": "evidence/patches/qwen_coder/is_valid_parenthesization/execution.json",
+      "source_sha256": "10f82dd99219c3653aa0243f52b42f03a334e3af7bf38c5bc255d98bf91d6d55",
+      "response": {
+        "schema_version": "1.0",
+        "issues": [
+          {
+            "file": "python_programs/is_valid_parenthesization.py",
+            "line_start": 12,
+            "line_end": 12,
+            "category": "functional",
+            "severity": "medium",
+            "comment": "Проверка отрицательной глубины ловит лишние закрывающие скобки, но финальный return True принимает незакрытые открывающие. Возвращайте depth == 0 после цикла; ранний отказ при depth < 0 сохраните.",
+            "proposed_patch": "--- a/python_programs/is_valid_parenthesization.py\n+++ b/python_programs/is_valid_parenthesization.py\n@@ -9,7 +9,7 @@\n             if depth < 0:\n                 return False\n \n-    return True\n+    return depth == 0\n \n \n \"\"\"\n",
+            "confidence": 0.85
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "review_id": "is_valid_parenthesization__qwen_coder",
+          "case_id": "is_valid_parenthesization",
+          "response_group": "Qwen-Coder",
+          "expert_id": "E1",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            2
+          ],
+          "patch_meaning_score": 1,
+          "explanation": "Учитываются оба условия правильной последовательности.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        },
+        {
+          "review_id": "is_valid_parenthesization__qwen_coder",
+          "case_id": "is_valid_parenthesization",
+          "response_group": "Qwen-Coder",
+          "expert_id": "E2",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            2
+          ],
+          "patch_meaning_score": 1,
+          "explanation": "Минимальный patch сохраняет проверку порядка скобок.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        }
+      ],
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "D": 1.0,
+      "C": 1.0,
+      "comment_medians": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "A": 1,
+      "T": 1,
+      "R": 1.0,
+      "S": 1.0,
+      "Q": 1.0,
+      "CCRQS": 1.0,
+      "provenance_ref": "data_origin.json",
+      "synthetic": true,
+      "real_model_called": false
+    },
+    {
+      "review_id": "levenshtein__gemma",
+      "case_id": "levenshtein",
+      "model_key": "gemma",
+      "response_group": "Gemma",
+      "response_file": "responses/gemma/levenshtein.json",
+      "execution_file": null,
+      "source_sha256": "c3f2d471861c46b69990bfe271c646ecf52d51f4f0aa3b8b6d5104b102b442ff",
+      "response": {
+        "schema_version": "1.0",
+        "issues": [
+          {
+            "file": "python_programs/levenshtein.py",
+            "line_start": 6,
+            "line_end": 6,
+            "category": "other",
+            "severity": "medium",
+            "comment": "Рекурсивный алгоритм слишком медленный на длинных строках. Добавьте мемоизацию, чтобы сократить число повторных вызовов.",
+            "proposed_patch": null,
+            "confidence": 0.85
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "review_id": "levenshtein__gemma",
+          "case_id": "levenshtein",
+          "response_group": "Gemma",
+          "expert_id": "E1",
+          "synthetic": true,
+          "issue_labels": [
+            "out_of_scope"
+          ],
+          "comment_scores": null,
+          "patch_meaning_score": null,
+          "explanation": "Замечание о скорости не раскрывает подтверждённый функциональный дефект.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        },
+        {
+          "review_id": "levenshtein__gemma",
+          "case_id": "levenshtein",
+          "response_group": "Gemma",
+          "expert_id": "E2",
+          "synthetic": true,
+          "issue_labels": [
+            "out_of_scope"
+          ],
+          "comment_scores": null,
+          "patch_meaning_score": null,
+          "explanation": "Ошибка в стоимости совпадающих символов пропущена; комментарий вне основной задачи.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        }
+      ],
+      "TP": 0,
+      "FP": 1,
+      "FN": 1,
+      "D": 0.0,
+      "C": 0,
+      "comment_medians": null,
+      "A": null,
+      "T": null,
+      "R": null,
+      "S": null,
+      "Q": 0,
+      "CCRQS": 0.0,
+      "provenance_ref": "data_origin.json",
+      "synthetic": true,
+      "real_model_called": false
+    },
+    {
+      "review_id": "levenshtein__qwen_coder",
+      "case_id": "levenshtein",
+      "model_key": "qwen_coder",
+      "response_group": "Qwen-Coder",
+      "response_file": "responses/qwen_coder/levenshtein.json",
+      "execution_file": "evidence/patches/qwen_coder/levenshtein/execution.json",
+      "source_sha256": "c3f2d471861c46b69990bfe271c646ecf52d51f4f0aa3b8b6d5104b102b442ff",
+      "response": {
+        "schema_version": "1.0",
+        "issues": [
+          {
+            "file": "python_programs/levenshtein.py",
+            "line_start": 6,
+            "line_end": 6,
+            "category": "functional",
+            "severity": "medium",
+            "comment": "При source[0] == target[0] не требуется операция редактирования, однако код добавляет 1. Уберите прибавление в этой ветке; для несовпадающих символов стоимость 1 сохраните.",
+            "proposed_patch": "--- a/python_programs/levenshtein.py\n+++ b/python_programs/levenshtein.py\n@@ -3,7 +3,7 @@\n         return len(source) or len(target)\n \n     elif source[0] == target[0]:\n-        return 1 + levenshtein(source[1:], target[1:])\n+        return levenshtein(source[1:], target[1:])\n \n     else:\n         return 1 + min(\n",
+            "confidence": 0.85
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "review_id": "levenshtein__qwen_coder",
+          "case_id": "levenshtein",
+          "response_group": "Qwen-Coder",
+          "expert_id": "E1",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            2
+          ],
+          "patch_meaning_score": 1,
+          "explanation": "Правильно исправлена стоимость совпадающих символов.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        },
+        {
+          "review_id": "levenshtein__qwen_coder",
+          "case_id": "levenshtein",
+          "response_group": "Qwen-Coder",
+          "expert_id": "E2",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            1
+          ],
+          "patch_meaning_score": 1,
+          "explanation": "Верный patch; конкретный контрпример сделал бы комментарий ещё убедительнее.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        }
+      ],
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "D": 1.0,
+      "C": 0.9166666666666666,
+      "comment_medians": [
+        2.0,
+        2.0,
+        1.5
+      ],
+      "A": 1,
+      "T": 1,
+      "R": 1.0,
+      "S": 1.0,
+      "Q": 1.0,
+      "CCRQS": 0.9722222222222221,
+      "provenance_ref": "data_origin.json",
+      "synthetic": true,
+      "real_model_called": false
+    },
+    {
+      "review_id": "max_sublist_sum__gemma",
+      "case_id": "max_sublist_sum",
+      "model_key": "gemma",
+      "response_group": "Gemma",
+      "response_file": "responses/gemma/max_sublist_sum.json",
+      "execution_file": "evidence/patches/gemma/max_sublist_sum/execution.json",
+      "source_sha256": "6a61460050736ddff53202daf74fb37c562bf6c1236f192996c906b1c66ab61a",
+      "response": {
+        "schema_version": "1.0",
+        "issues": [
+          {
+            "file": "python_programs/max_sublist_sum.py",
+            "line_start": 7,
+            "line_end": 7,
+            "category": "functional",
+            "severity": "medium",
+            "comment": "После отрицательного префикса текущая сумма остаётся отрицательной и мешает начать лучший подсписок заново. Сбрасывайте max_ending_here до нуля через max(0, max_ending_here + x).",
+            "proposed_patch": "--- a/python_programs/max_sublist_sum.py\n+++ b/python_programs/max_sublist_sum.py\n@@ -4,7 +4,7 @@\n     max_so_far = 0\n \n     for x in arr:\n-        max_ending_here = max_ending_here + x\n+        max_ending_here = max(0, max_ending_here + x)\n         max_so_far = max(max_so_far, max_ending_here)\n \n     return max_so_far\n",
+            "confidence": 0.85
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "review_id": "max_sublist_sum__gemma",
+          "case_id": "max_sublist_sum",
+          "response_group": "Gemma",
+          "expert_id": "E1",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            2
+          ],
+          "patch_meaning_score": 1,
+          "explanation": "Предложен правильный переход алгоритма; разрешённый пустой подсписок сохранён.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        },
+        {
+          "review_id": "max_sublist_sum__gemma",
+          "case_id": "max_sublist_sum",
+          "response_group": "Gemma",
+          "expert_id": "E2",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            1,
+            2
+          ],
+          "patch_meaning_score": 1,
+          "explanation": "Исправление корректно, но объяснение последствия можно подкрепить примером отрицательного префикса.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        }
+      ],
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "D": 1.0,
+      "C": 0.9166666666666666,
+      "comment_medians": [
+        2.0,
+        1.5,
+        2.0
+      ],
+      "A": 1,
+      "T": 1,
+      "R": 1.0,
+      "S": 1.0,
+      "Q": 1.0,
+      "CCRQS": 0.9722222222222221,
+      "provenance_ref": "data_origin.json",
+      "synthetic": true,
+      "real_model_called": false
+    },
+    {
+      "review_id": "max_sublist_sum__qwen_coder",
+      "case_id": "max_sublist_sum",
+      "model_key": "qwen_coder",
+      "response_group": "Qwen-Coder",
+      "response_file": "responses/qwen_coder/max_sublist_sum.json",
+      "execution_file": null,
+      "source_sha256": "6a61460050736ddff53202daf74fb37c562bf6c1236f192996c906b1c66ab61a",
+      "response": {
+        "schema_version": "1.0",
+        "issues": [
+          {
+            "file": "python_programs/max_sublist_sum.py",
+            "line_start": 7,
+            "line_end": 7,
+            "category": "functional",
+            "severity": "medium",
+            "comment": "max_ending_here продолжает отрицательную сумму вместо начала нового подсписка. После отрицательного префикса результат может быть занижен. Нужно выбирать максимум между нулём и продолжением текущей суммы.",
+            "proposed_patch": null,
+            "confidence": 0.85
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "review_id": "max_sublist_sum__qwen_coder",
+          "case_id": "max_sublist_sum",
+          "response_group": "Qwen-Coder",
+          "expert_id": "E1",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            1
+          ],
+          "patch_meaning_score": null,
+          "explanation": "Дефект найден и объяснён, но применимого diff нет.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        },
+        {
+          "review_id": "max_sublist_sum__qwen_coder",
+          "case_id": "max_sublist_sum",
+          "response_group": "Qwen-Coder",
+          "expert_id": "E2",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            2
+          ],
+          "patch_meaning_score": null,
+          "explanation": "Направление исправления правильное; отсутствие patch даёт Q=0.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        }
+      ],
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "D": 1.0,
+      "C": 0.9166666666666666,
+      "comment_medians": [
+        2.0,
+        2.0,
+        1.5
+      ],
+      "A": null,
+      "T": null,
+      "R": null,
+      "S": null,
+      "Q": 0,
+      "CCRQS": 0.6388888888888888,
+      "provenance_ref": "data_origin.json",
+      "synthetic": true,
+      "real_model_called": false
+    },
+    {
+      "review_id": "powerset__gemma",
+      "case_id": "powerset",
+      "model_key": "gemma",
+      "response_group": "Gemma",
+      "response_file": "responses/gemma/powerset.json",
+      "execution_file": "evidence/patches/gemma/powerset/execution.json",
+      "source_sha256": "32349b0ab55c8e5c5f6f88dd042ef560da9ba94de28bd5fce9da592b2f7a2a51",
+      "response": {
+        "schema_version": "1.0",
+        "issues": [
+          {
+            "file": "python_programs/powerset.py",
+            "line_start": 6,
+            "line_end": 6,
+            "category": "functional",
+            "severity": "medium",
+            "comment": "Функция не возвращает подмножества без первого элемента. Добавьте их к результату, чтобы получить полный набор подмножеств.",
+            "proposed_patch": "--- a/python_programs/powerset.py\n+++ b/python_programs/powerset.py\n@@ -3,7 +3,7 @@\n     if arr:\n         first, *rest = arr #python3 just like car and cdr (in this case anyway..)\n         rest_subsets = powerset(rest)\n-        return [[first] + subset for subset in rest_subsets]\n+        return [[]] + [[first] + subset for subset in rest_subsets]\n     else:\n         return [[]]\n \n",
+            "confidence": 0.85
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "review_id": "powerset__gemma",
+          "case_id": "powerset",
+          "response_group": "Gemma",
+          "expert_id": "E1",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            1,
+            1
+          ],
+          "patch_meaning_score": null,
+          "explanation": "Направление верное, но patch добавляет только пустое множество, а не все rest_subsets.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        },
+        {
+          "review_id": "powerset__gemma",
+          "case_id": "powerset",
+          "response_group": "Gemma",
+          "expert_id": "E2",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            1
+          ],
+          "patch_meaning_score": null,
+          "explanation": "Для [1, 2] по-прежнему отсутствует [2]; полный набор не восстановлен.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        }
+      ],
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "D": 1.0,
+      "C": 0.75,
+      "comment_medians": [
+        2.0,
+        1.5,
+        1.0
+      ],
+      "A": 1,
+      "T": 0,
+      "R": 1.0,
+      "S": null,
+      "Q": 0,
+      "CCRQS": 0.5833333333333333,
+      "provenance_ref": "data_origin.json",
+      "synthetic": true,
+      "real_model_called": false
+    },
+    {
+      "review_id": "powerset__qwen_coder",
+      "case_id": "powerset",
+      "model_key": "qwen_coder",
+      "response_group": "Qwen-Coder",
+      "response_file": "responses/qwen_coder/powerset.json",
+      "execution_file": "evidence/patches/qwen_coder/powerset/execution.json",
+      "source_sha256": "32349b0ab55c8e5c5f6f88dd042ef560da9ba94de28bd5fce9da592b2f7a2a51",
+      "response": {
+        "schema_version": "1.0",
+        "issues": [
+          {
+            "file": "python_programs/powerset.py",
+            "line_start": 6,
+            "line_end": 6,
+            "category": "functional",
+            "severity": "medium",
+            "comment": "Результат включает только подмножества с first. Все rest_subsets, не содержащие first, тоже нужны. Верните rest_subsets + [[first] + subset for subset in rest_subsets]; тогда число подмножеств удвоится на каждом шаге.",
+            "proposed_patch": "--- a/python_programs/powerset.py\n+++ b/python_programs/powerset.py\n@@ -3,7 +3,7 @@\n     if arr:\n         first, *rest = arr #python3 just like car and cdr (in this case anyway..)\n         rest_subsets = powerset(rest)\n-        return [[first] + subset for subset in rest_subsets]\n+        return rest_subsets + [[first] + subset for subset in rest_subsets]\n     else:\n         return [[]]\n \n",
+            "confidence": 0.85
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "review_id": "powerset__qwen_coder",
+          "case_id": "powerset",
+          "response_group": "Qwen-Coder",
+          "expert_id": "E1",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            2
+          ],
+          "patch_meaning_score": 1,
+          "explanation": "Выявлена пропущенная половина результата и дано точное действие.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        },
+        {
+          "review_id": "powerset__qwen_coder",
+          "case_id": "powerset",
+          "response_group": "Qwen-Coder",
+          "expert_id": "E2",
+          "synthetic": true,
+          "issue_labels": [
+            "primary_match"
+          ],
+          "comment_scores": [
+            2,
+            2,
+            2
+          ],
+          "patch_meaning_score": 1,
+          "explanation": "Корректное рекурсивное построение всех подмножеств.",
+          "role": "demo_component_rater",
+          "source_type": "prepared_demonstration_record"
+        }
+      ],
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "D": 1.0,
+      "C": 1.0,
+      "comment_medians": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "A": 1,
+      "T": 1,
+      "R": 1.0,
+      "S": 1.0,
+      "Q": 1.0,
+      "CCRQS": 1.0,
+      "provenance_ref": "data_origin.json",
+      "synthetic": true,
+      "real_model_called": false
+    }
+  ]
+}

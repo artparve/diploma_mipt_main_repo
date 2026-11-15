@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "file": "python_programs/levenshtein.py",
+      "line_start": 6,
+      "line_end": 6,
+      "category": "other",
+      "severity": "medium",
+      "comment": "Рекурсивный алгоритм слишком медленный на длинных строках. Добавьте мемоизацию, чтобы сократить число повторных вызовов.",
+      "proposed_patch": null,
+      "confidence": 0.85
+    }
+  ]
+}

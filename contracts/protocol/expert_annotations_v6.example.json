@@ -1,0 +1,87 @@
+{
+  "protocol_version": "annotation-v6",
+  "synthetic": true,
+  "notice": "Учебные записи для случая A. Это не реальные данные и не полная тройка независимых оценщиков для каждой роли.",
+  "records": [
+    {
+      "protocol_version": "annotation-v6",
+      "review_id": "review-demo-a",
+      "instance_id": "synthetic:average",
+      "packet_id": "packet-demo-m",
+      "packet_version": "1",
+      "assignment_id": "assignment-demo-m",
+      "expert_id": "expert-demo-components",
+      "role": "M",
+      "issue_index": null,
+      "ratings": {
+        "issue_labels": [
+          {
+            "issue_index": 0,
+            "label": "primary_match",
+            "evidence": "Строка 2: len(values)=0 на пустом списке; комментарий объясняет деление на ноль."
+          }
+        ]
+      },
+      "rationale": "Верно указаны причина и место основного дефекта.",
+      "status": "completed",
+      "duration_seconds": 60,
+      "data_problem": null
+    },
+    {
+      "protocol_version": "annotation-v6",
+      "review_id": "review-demo-a",
+      "instance_id": "synthetic:average",
+      "packet_id": "packet-demo-c",
+      "packet_version": "1",
+      "assignment_id": "assignment-demo-c",
+      "expert_id": "expert-demo-components",
+      "role": "C",
+      "issue_index": 0,
+      "ratings": {
+        "specificity": 2,
+        "explanation_correctness": 2,
+        "actionability": 2
+      },
+      "rationale": "Названы пустой ввод, деление на ноль и явная проверка с ValueError; patch не предъявлялся.",
+      "status": "completed",
+      "duration_seconds": 45,
+      "data_problem": null
+    },
+    {
+      "protocol_version": "annotation-v6",
+      "review_id": "review-demo-a",
+      "instance_id": "synthetic:average",
+      "packet_id": "packet-demo-s",
+      "packet_version": "1",
+      "assignment_id": "assignment-demo-s",
+      "expert_id": "expert-demo-components",
+      "role": "S",
+      "issue_index": 0,
+      "ratings": {
+        "semantic_correctness": 1
+      },
+      "rationale": "Пустой список приводит к ValueError; вычисление среднего непустого списка сохраняется.",
+      "status": "completed",
+      "duration_seconds": 75,
+      "data_problem": null
+    },
+    {
+      "protocol_version": "annotation-v6",
+      "review_id": "review-demo-a",
+      "instance_id": "synthetic:average",
+      "packet_id": "packet-demo-h",
+      "packet_version": "1",
+      "assignment_id": "assignment-demo-h",
+      "expert_id": "expert-demo-holistic",
+      "role": "H",
+      "issue_index": null,
+      "ratings": {
+        "holistic_quality": 4
+      },
+      "rationale": "Review точно объясняет проблему и предлагает уместное исправление без лишних замечаний; компонентные оценки не предъявлялись.",
+      "status": "completed",
+      "duration_seconds": 90,
+      "data_problem": null
+    }
+  ]
+}

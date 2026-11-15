@@ -1,0 +1,29 @@
+{
+  "config_version": "pipeline-v8",
+  "backend": "llama_cpp",
+  "base_url": "http://127.0.0.1:8080",
+  "case_ids": ["gcd", "find_in_sorted", "quicksort"],
+  "executor": "docker",
+  "docker_image": "ccrqs-runner:v8",
+  "test_timeout_seconds": 2,
+  "process_timeout_seconds": 40,
+  "inference_timeout_seconds": 180,
+  "seed": 42,
+  "max_input_tokens": 4096,
+  "max_new_tokens": 2048,
+  "admission": {
+    "status": "not_run",
+    "model_id": "L1",
+    "hf_repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
+    "revision": null,
+    "weights_sha256": null,
+    "weights_source": null,
+    "quantization": "Q4_K_M",
+    "backend_revision": null,
+    "chat_template_sha256": null,
+    "non_thinking_verified": false,
+    "hardware": null,
+    "server_command": null,
+    "memory_measurements": null
+  }
+}

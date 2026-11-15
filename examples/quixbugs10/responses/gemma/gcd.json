@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "file": "python_programs/gcd.py",
+      "line_start": 5,
+      "line_end": 5,
+      "category": "runtime",
+      "severity": "medium",
+      "comment": "В рекурсивной ветке b остаётся тем же. После первого шага остаток может быть меньше b, и вызов повторяется бесконечно. Для алгоритма Евклида передавайте gcd(b, a % b).",
+      "proposed_patch": "--- a/python_programs/gcd.py\n+++ b/python_programs/gcd.py\n@@ -2,7 +2,7 @@\n     if b == 0:\n         return a\n     else:\n-        return gcd(a % b, b)\n+        return gcd(b, a % b)\n \n \n \"\"\"\n",
+      "confidence": 0.85
+    }
+  ]
+}

@@ -1,0 +1,328 @@
+{
+  "buggy": {
+    "status": "ok",
+    "exit_code": 1,
+    "tests": {
+      "test_quicksort[input_data0-expected0]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00016870000035851263
+      },
+      "test_quicksort[input_data1-expected1]": {
+        "outcome": "failed",
+        "phase": "call",
+        "seconds": 0.00042380000013508834,
+        "detail": "input_data = [[3, 1, 4, 1, 5, 9, ...]], expected = [1, 1, 2, 3, 3, 3, ...]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_quicksort(input_data, expected):\n>       assert quicksort(*input_data) == expected\nE       assert [1, 2, 3, 4, 5, 6, ...] == [1, 1, 2, 3, 3, 3, ...]\nE         \nE         At index 1 diff: 2 != 1\nE         Right contains 7 more items, first extra item: 5\nE         Use -v to get more diff\n\npython_testcases\\test_quicksort.py:15: AssertionError"
+      },
+      "test_quicksort[input_data2-expected2]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00011630000153672881
+      },
+      "test_quicksort[input_data3-expected3]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.0001081000009435229
+      },
+      "test_quicksort[input_data4-expected4]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00011720000111381523
+      },
+      "test_quicksort[input_data5-expected5]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.0001205000007757917
+      },
+      "test_quicksort[input_data6-expected6]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00018060000002151355
+      },
+      "test_quicksort[input_data7-expected7]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00014849999934085645
+      },
+      "test_quicksort[input_data8-expected8]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00010339999789721332
+      },
+      "test_quicksort[input_data9-expected9]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00011050000102841295
+      },
+      "test_quicksort[input_data10-expected10]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.0001438999970559962
+      },
+      "test_quicksort[input_data11-expected11]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00016619999951217324
+      },
+      "test_quicksort[input_data12-expected12]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00015320000238716602
+      }
+    },
+    "collection_errors": [],
+    "seconds": 0.730395700000372,
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "pytest": "8.3.5",
+    "process_exit_code": 0,
+    "stdout": ".F...........                                                            [100%]\n================================== FAILURES ===================================\n____________________ test_quicksort[input_data1-expected1] ____________________\n\ninput_data = [[3, 1, 4, 1, 5, 9, ...]], expected = [1, 1, 2, 3, 3, 3, ...]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_quicksort(input_data, expected):\n>       assert quicksort(*input_data) == expected\nE       assert [1, 2, 3, 4, 5, 6, ...] == [1, 1, 2, 3, 3, 3, ...]\nE         \nE         At index 1 diff: 2 != 1\nE         Right contains 7 more items, first extra item: 5\nE         Use -v to get more diff\n\npython_testcases\\test_quicksort.py:15: AssertionError\n=========================== short test summary info ===========================\nFAILED python_testcases/test_quicksort.py::test_quicksort[input_data1-expected1]\n1 failed, 12 passed in 0.65s\n",
+    "stderr": "",
+    "wall_seconds": 1.0636769000011554,
+    "executor": "trusted_local",
+    "attempts": [
+      {
+        "status": "ok",
+        "exit_code": 1,
+        "tests": {
+          "test_quicksort[input_data0-expected0]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00016870000035851263
+          },
+          "test_quicksort[input_data1-expected1]": {
+            "outcome": "failed",
+            "phase": "call",
+            "seconds": 0.00042380000013508834,
+            "detail": "input_data = [[3, 1, 4, 1, 5, 9, ...]], expected = [1, 1, 2, 3, 3, 3, ...]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_quicksort(input_data, expected):\n>       assert quicksort(*input_data) == expected\nE       assert [1, 2, 3, 4, 5, 6, ...] == [1, 1, 2, 3, 3, 3, ...]\nE         \nE         At index 1 diff: 2 != 1\nE         Right contains 7 more items, first extra item: 5\nE         Use -v to get more diff\n\npython_testcases\\test_quicksort.py:15: AssertionError"
+          },
+          "test_quicksort[input_data2-expected2]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00011630000153672881
+          },
+          "test_quicksort[input_data3-expected3]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.0001081000009435229
+          },
+          "test_quicksort[input_data4-expected4]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00011720000111381523
+          },
+          "test_quicksort[input_data5-expected5]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.0001205000007757917
+          },
+          "test_quicksort[input_data6-expected6]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00018060000002151355
+          },
+          "test_quicksort[input_data7-expected7]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00014849999934085645
+          },
+          "test_quicksort[input_data8-expected8]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00010339999789721332
+          },
+          "test_quicksort[input_data9-expected9]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00011050000102841295
+          },
+          "test_quicksort[input_data10-expected10]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.0001438999970559962
+          },
+          "test_quicksort[input_data11-expected11]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00016619999951217324
+          },
+          "test_quicksort[input_data12-expected12]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00015320000238716602
+          }
+        },
+        "collection_errors": [],
+        "seconds": 0.730395700000372,
+        "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+        "pytest": "8.3.5",
+        "process_exit_code": 0,
+        "stdout": ".F...........                                                            [100%]\n================================== FAILURES ===================================\n____________________ test_quicksort[input_data1-expected1] ____________________\n\ninput_data = [[3, 1, 4, 1, 5, 9, ...]], expected = [1, 1, 2, 3, 3, 3, ...]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_quicksort(input_data, expected):\n>       assert quicksort(*input_data) == expected\nE       assert [1, 2, 3, 4, 5, 6, ...] == [1, 1, 2, 3, 3, 3, ...]\nE         \nE         At index 1 diff: 2 != 1\nE         Right contains 7 more items, first extra item: 5\nE         Use -v to get more diff\n\npython_testcases\\test_quicksort.py:15: AssertionError\n=========================== short test summary info ===========================\nFAILED python_testcases/test_quicksort.py::test_quicksort[input_data1-expected1]\n1 failed, 12 passed in 0.65s\n",
+        "stderr": "",
+        "wall_seconds": 1.0636769000011554,
+        "executor": "trusted_local"
+      }
+    ]
+  },
+  "reference": {
+    "status": "ok",
+    "exit_code": 0,
+    "tests": {
+      "test_quicksort[input_data0-expected0]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00016289999985019676
+      },
+      "test_quicksort[input_data1-expected1]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00018880000061471947
+      },
+      "test_quicksort[input_data2-expected2]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.0001689000018814113
+      },
+      "test_quicksort[input_data3-expected3]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00018790000103763305
+      },
+      "test_quicksort[input_data4-expected4]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.0001883000004454516
+      },
+      "test_quicksort[input_data5-expected5]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.0001874999979918357
+      },
+      "test_quicksort[input_data6-expected6]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.0002089000008709263
+      },
+      "test_quicksort[input_data7-expected7]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00018249999993713573
+      },
+      "test_quicksort[input_data8-expected8]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00017120000120485201
+      },
+      "test_quicksort[input_data9-expected9]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00017549999756738544
+      },
+      "test_quicksort[input_data10-expected10]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00016519999917363748
+      },
+      "test_quicksort[input_data11-expected11]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.0002303000001120381
+      },
+      "test_quicksort[input_data12-expected12]": {
+        "outcome": "passed",
+        "phase": "call",
+        "seconds": 0.00021070000002509914
+      }
+    },
+    "collection_errors": [],
+    "seconds": 0.1532690999993065,
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "pytest": "8.3.5",
+    "process_exit_code": 0,
+    "stdout": ".............                                                            [100%]\n13 passed in 0.06s\n",
+    "stderr": "",
+    "wall_seconds": 0.503751000000193,
+    "executor": "trusted_local",
+    "attempts": [
+      {
+        "status": "ok",
+        "exit_code": 0,
+        "tests": {
+          "test_quicksort[input_data0-expected0]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00016289999985019676
+          },
+          "test_quicksort[input_data1-expected1]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00018880000061471947
+          },
+          "test_quicksort[input_data2-expected2]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.0001689000018814113
+          },
+          "test_quicksort[input_data3-expected3]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00018790000103763305
+          },
+          "test_quicksort[input_data4-expected4]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.0001883000004454516
+          },
+          "test_quicksort[input_data5-expected5]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.0001874999979918357
+          },
+          "test_quicksort[input_data6-expected6]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.0002089000008709263
+          },
+          "test_quicksort[input_data7-expected7]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00018249999993713573
+          },
+          "test_quicksort[input_data8-expected8]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00017120000120485201
+          },
+          "test_quicksort[input_data9-expected9]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00017549999756738544
+          },
+          "test_quicksort[input_data10-expected10]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00016519999917363748
+          },
+          "test_quicksort[input_data11-expected11]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.0002303000001120381
+          },
+          "test_quicksort[input_data12-expected12]": {
+            "outcome": "passed",
+            "phase": "call",
+            "seconds": 0.00021070000002509914
+          }
+        },
+        "collection_errors": [],
+        "seconds": 0.1532690999993065,
+        "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+        "pytest": "8.3.5",
+        "process_exit_code": 0,
+        "stdout": ".............                                                            [100%]\n13 passed in 0.06s\n",
+        "stderr": "",
+        "wall_seconds": 0.503751000000193,
+        "executor": "trusted_local"
+      }
+    ]
+  }
+}

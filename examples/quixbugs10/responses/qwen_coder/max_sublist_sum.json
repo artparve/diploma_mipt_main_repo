@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "file": "python_programs/max_sublist_sum.py",
+      "line_start": 7,
+      "line_end": 7,
+      "category": "functional",
+      "severity": "medium",
+      "comment": "max_ending_here продолжает отрицательную сумму вместо начала нового подсписка. После отрицательного префикса результат может быть занижен. Нужно выбирать максимум между нулём и продолжением текущей суммы.",
+      "proposed_patch": null,
+      "confidence": 0.85
+    }
+  ]
+}

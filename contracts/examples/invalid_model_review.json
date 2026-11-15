@@ -1,0 +1,29 @@
+{
+  "schema_version": "ccrqs-dataset-v1-draft",
+  "synthetic": true,
+  "research_eligible": false,
+  "notice": "Вымышленный пример сохранения невалидного ответа; это не результат вызова модели.",
+  "review_id": "invalid-response-demo-001",
+  "example_id": "example-demo-average-v1",
+  "run_id": "run-demo-reviewcoder-001",
+  "source_type": "prepared_invalid_response_example",
+  "raw_response": "{\"schema_version\":\"1.0\",\"issues\":[",
+  "raw_response_sha256": "1492a4a8aa49f0dd9c616c7949a98b638402967b436e5c78674d7207d98e5ef6",
+  "structured_response": null,
+  "parse_status": "invalid_json",
+  "validation_errors": [
+    {
+      "stage": "json_parse",
+      "code": "incomplete_json",
+      "message": "JSON ответа оборван до завершения массива issues."
+    }
+  ],
+  "extraction_provenance": {
+    "method": "none",
+    "manual_correction_performed": false
+  },
+  "generation_status": "success_with_invalid_output",
+  "publication_status": "pending_review",
+  "duration_seconds": 8.5,
+  "attempt_index": 0
+}

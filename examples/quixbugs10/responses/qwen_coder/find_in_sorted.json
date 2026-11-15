@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "file": "python_programs/find_in_sorted.py",
+      "line_start": 9,
+      "line_end": 9,
+      "category": "runtime",
+      "severity": "medium",
+      "comment": "Правая ветка вызывает binsearch(mid, end), сохраняя уже проверенный индекс. Если mid == start, интервал не сокращается. Замените на binsearch(mid + 1, end), сохранив полуинтервал [start, end).",
+      "proposed_patch": "--- a/python_programs/find_in_sorted.py\n+++ b/python_programs/find_in_sorted.py\n@@ -6,7 +6,7 @@\n         if x < arr[mid]:\n             return binsearch(start, mid)\n         elif x > arr[mid]:\n-            return binsearch(mid, end)\n+            return binsearch(mid + 1, end)\n         else:\n             return mid\n \n",
+      "confidence": 0.85
+    },
+    {
+      "file": "python_programs/find_in_sorted.py",
+      "line_start": 9,
+      "line_end": 9,
+      "category": "runtime",
+      "severity": "low",
+      "comment": "Если искомого значения нет справа, mid может повторяться и функция зациклится. Исключите mid из нового диапазона.",
+      "proposed_patch": null,
+      "confidence": 0.8
+    }
+  ]
+}

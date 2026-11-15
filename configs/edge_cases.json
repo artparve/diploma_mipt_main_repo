@@ -1,0 +1,12 @@
+{
+  "config_version": "pipeline-v8",
+  "backend": "replay",
+  "fixture": "fixtures/edge_cases.json",
+  "case_ids": ["gcd", "find_in_sorted", "quicksort"],
+  "executor": "trusted_local",
+  "test_timeout_seconds": 2,
+  "process_timeout_seconds": 40,
+  "seed": 42,
+  "max_input_tokens": 4096,
+  "max_new_tokens": 2048
+}

@@ -1,0 +1,4 @@
+SYNTHETIC: invented log, tests were not executed.
+Buggy: 1 failed, 3 passed
+Reference: 4 passed
+Patched: 4 passed

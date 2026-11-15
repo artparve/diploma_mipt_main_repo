@@ -1,0 +1,88 @@
+{
+  "status": "ok",
+  "exit_code": 1,
+  "tests": {
+    "test_powerset[input_data0-expected0]": {
+      "outcome": "failed",
+      "phase": "call",
+      "seconds": 0.0008077999996203289,
+      "detail": "input_data = [['a', 'b', 'c']]\nexpected = [[], ['c'], ['b'], ['b', 'c'], ['a'], ['a', 'c'], ...]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_powerset(input_data, expected):\n>       assert powerset(*input_data) == expected\nE       AssertionError: assert [[], ['a'], [...a', 'b', 'c']] == [[], ['c'], [...a', 'c'], ...]\nE         \nE         At index 1 diff: ['a'] != ['c']\nE         Right contains 4 more items, first extra item: ['a']\nE         Use -v to get more diff\n\npython_testcases\\test_powerset.py:15: AssertionError"
+    },
+    "test_powerset[input_data1-expected1]": {
+      "outcome": "failed",
+      "phase": "call",
+      "seconds": 0.0004887000000053376,
+      "detail": "input_data = [['a', 'b']], expected = [[], ['b'], ['a'], ['a', 'b']]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_powerset(input_data, expected):\n>       assert powerset(*input_data) == expected\nE       AssertionError: assert [[], ['a'], ['a', 'b']] == [[], ['b'], ['a'], ['a', 'b']]\nE         \nE         At index 1 diff: ['a'] != ['b']\nE         Right contains one more item: ['a', 'b']\nE         Use -v to get more diff\n\npython_testcases\\test_powerset.py:15: AssertionError"
+    },
+    "test_powerset[input_data2-expected2]": {
+      "outcome": "passed",
+      "phase": "call",
+      "seconds": 0.0002779999999802385
+    },
+    "test_powerset[input_data3-expected3]": {
+      "outcome": "passed",
+      "phase": "call",
+      "seconds": 0.00023699999974269303
+    },
+    "test_powerset[input_data4-expected4]": {
+      "outcome": "failed",
+      "phase": "call",
+      "seconds": 0.0004989000003661204,
+      "detail": "input_data = [['x', 'df', 'z', 'm']]\nexpected = [[], ['m'], ['z'], ['z', 'm'], ['df'], ['df', 'm'], ...]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_powerset(input_data, expected):\n>       assert powerset(*input_data) == expected\nE       AssertionError: assert [[], ['x'], [...f', 'z', 'm']] == [[], ['m'], [...f', 'm'], ...]\nE         \nE         At index 1 diff: ['x'] != ['m']\nE         Right contains 11 more items, first extra item: ['df', 'm']\nE         Use -v to get more diff\n\npython_testcases\\test_powerset.py:15: AssertionError"
+    }
+  },
+  "collection_errors": [],
+  "seconds": 1.2420858999998927,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "pytest": "8.3.5",
+  "process_exit_code": 0,
+  "stdout": "FF..F                                                                    [100%]\n================================== FAILURES ===================================\n____________________ test_powerset[input_data0-expected0] _____________________\n\ninput_data = [['a', 'b', 'c']]\nexpected = [[], ['c'], ['b'], ['b', 'c'], ['a'], ['a', 'c'], ...]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_powerset(input_data, expected):\n>       assert powerset(*input_data) == expected\nE       AssertionError: assert [[], ['a'], [...a', 'b', 'c']] == [[], ['c'], [...a', 'c'], ...]\nE         \nE         At index 1 diff: ['a'] != ['c']\nE         Right contains 4 more items, first extra item: ['a']\nE         Use -v to get more diff\n\npython_testcases\\test_powerset.py:15: AssertionError\n____________________ test_powerset[input_data1-expected1] _____________________\n\ninput_data = [['a', 'b']], expected = [[], ['b'], ['a'], ['a', 'b']]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_powerset(input_data, expected):\n>       assert powerset(*input_data) == expected\nE       AssertionError: assert [[], ['a'], ['a', 'b']] == [[], ['b'], ['a'], ['a', 'b']]\nE         \nE         At index 1 diff: ['a'] != ['b']\nE         Right contains one more item: ['a', 'b']\nE         Use -v to get more diff\n\npython_testcases\\test_powerset.py:15: AssertionError\n____________________ test_powerset[input_data4-expected4] _____________________\n\ninput_data = [['x', 'df', 'z', 'm']]\nexpected = [[], ['m'], ['z'], ['z', 'm'], ['df'], ['df', 'm'], ...]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_powerset(input_data, expected):\n>       assert powerset(*input_data) == expected\nE       AssertionError: assert [[], ['x'], [...f', 'z', 'm']] == [[], ['m'], [...f', 'm'], ...]\nE         \nE         At index 1 diff: ['x'] != ['m']\nE         Right contains 11 more items, first extra item: ['df', 'm']\nE         Use -v to get more diff\n\npython_testcases\\test_powerset.py:15: AssertionError\n=========================== short test summary info ===========================\nFAILED python_testcases/test_powerset.py::test_powerset[input_data0-expected0]\nFAILED python_testcases/test_powerset.py::test_powerset[input_data1-expected1]\nFAILED python_testcases/test_powerset.py::test_powerset[input_data4-expected4]\n3 failed, 2 passed in 1.08s\n",
+  "stderr": "",
+  "wall_seconds": 1.8659843999998884,
+  "executor": "trusted_local",
+  "attempts": [
+    {
+      "status": "ok",
+      "exit_code": 1,
+      "tests": {
+        "test_powerset[input_data0-expected0]": {
+          "outcome": "failed",
+          "phase": "call",
+          "seconds": 0.0008077999996203289,
+          "detail": "input_data = [['a', 'b', 'c']]\nexpected = [[], ['c'], ['b'], ['b', 'c'], ['a'], ['a', 'c'], ...]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_powerset(input_data, expected):\n>       assert powerset(*input_data) == expected\nE       AssertionError: assert [[], ['a'], [...a', 'b', 'c']] == [[], ['c'], [...a', 'c'], ...]\nE         \nE         At index 1 diff: ['a'] != ['c']\nE         Right contains 4 more items, first extra item: ['a']\nE         Use -v to get more diff\n\npython_testcases\\test_powerset.py:15: AssertionError"
+        },
+        "test_powerset[input_data1-expected1]": {
+          "outcome": "failed",
+          "phase": "call",
+          "seconds": 0.0004887000000053376,
+          "detail": "input_data = [['a', 'b']], expected = [[], ['b'], ['a'], ['a', 'b']]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_powerset(input_data, expected):\n>       assert powerset(*input_data) == expected\nE       AssertionError: assert [[], ['a'], ['a', 'b']] == [[], ['b'], ['a'], ['a', 'b']]\nE         \nE         At index 1 diff: ['a'] != ['b']\nE         Right contains one more item: ['a', 'b']\nE         Use -v to get more diff\n\npython_testcases\\test_powerset.py:15: AssertionError"
+        },
+        "test_powerset[input_data2-expected2]": {
+          "outcome": "passed",
+          "phase": "call",
+          "seconds": 0.0002779999999802385
+        },
+        "test_powerset[input_data3-expected3]": {
+          "outcome": "passed",
+          "phase": "call",
+          "seconds": 0.00023699999974269303
+        },
+        "test_powerset[input_data4-expected4]": {
+          "outcome": "failed",
+          "phase": "call",
+          "seconds": 0.0004989000003661204,
+          "detail": "input_data = [['x', 'df', 'z', 'm']]\nexpected = [[], ['m'], ['z'], ['z', 'm'], ['df'], ['df', 'm'], ...]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_powerset(input_data, expected):\n>       assert powerset(*input_data) == expected\nE       AssertionError: assert [[], ['x'], [...f', 'z', 'm']] == [[], ['m'], [...f', 'm'], ...]\nE         \nE         At index 1 diff: ['x'] != ['m']\nE         Right contains 11 more items, first extra item: ['df', 'm']\nE         Use -v to get more diff\n\npython_testcases\\test_powerset.py:15: AssertionError"
+        }
+      },
+      "collection_errors": [],
+      "seconds": 1.2420858999998927,
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "pytest": "8.3.5",
+      "process_exit_code": 0,
+      "stdout": "FF..F                                                                    [100%]\n================================== FAILURES ===================================\n____________________ test_powerset[input_data0-expected0] _____________________\n\ninput_data = [['a', 'b', 'c']]\nexpected = [[], ['c'], ['b'], ['b', 'c'], ['a'], ['a', 'c'], ...]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_powerset(input_data, expected):\n>       assert powerset(*input_data) == expected\nE       AssertionError: assert [[], ['a'], [...a', 'b', 'c']] == [[], ['c'], [...a', 'c'], ...]\nE         \nE         At index 1 diff: ['a'] != ['c']\nE         Right contains 4 more items, first extra item: ['a']\nE         Use -v to get more diff\n\npython_testcases\\test_powerset.py:15: AssertionError\n____________________ test_powerset[input_data1-expected1] _____________________\n\ninput_data = [['a', 'b']], expected = [[], ['b'], ['a'], ['a', 'b']]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_powerset(input_data, expected):\n>       assert powerset(*input_data) == expected\nE       AssertionError: assert [[], ['a'], ['a', 'b']] == [[], ['b'], ['a'], ['a', 'b']]\nE         \nE         At index 1 diff: ['a'] != ['b']\nE         Right contains one more item: ['a', 'b']\nE         Use -v to get more diff\n\npython_testcases\\test_powerset.py:15: AssertionError\n____________________ test_powerset[input_data4-expected4] _____________________\n\ninput_data = [['x', 'df', 'z', 'm']]\nexpected = [[], ['m'], ['z'], ['z', 'm'], ['df'], ['df', 'm'], ...]\n\n    @pytest.mark.parametrize(\"input_data,expected\", testdata)\n    def test_powerset(input_data, expected):\n>       assert powerset(*input_data) == expected\nE       AssertionError: assert [[], ['x'], [...f', 'z', 'm']] == [[], ['m'], [...f', 'm'], ...]\nE         \nE         At index 1 diff: ['x'] != ['m']\nE         Right contains 11 more items, first extra item: ['df', 'm']\nE         Use -v to get more diff\n\npython_testcases\\test_powerset.py:15: AssertionError\n=========================== short test summary info ===========================\nFAILED python_testcases/test_powerset.py::test_powerset[input_data0-expected0]\nFAILED python_testcases/test_powerset.py::test_powerset[input_data1-expected1]\nFAILED python_testcases/test_powerset.py::test_powerset[input_data4-expected4]\n3 failed, 2 passed in 1.08s\n",
+      "stderr": "",
+      "wall_seconds": 1.8659843999998884,
+      "executor": "trusted_local"
+    }
+  ]
+}

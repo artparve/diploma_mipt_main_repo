@@ -1,0 +1,1455 @@
+{
+  "source_snapshots": {
+    "BugsInPy": "11c5f1eea954a42132cfd06bf257766a7963e0fd",
+    "PyResBugs": "27d2a38682d861339275e37c17b52826292dd458",
+    "QuixBugs": "4257f44b0ff1181dedaedee6a447e133219fcebf"
+  },
+  "BugsInPy": {
+    "raw_records": 501,
+    "unique_repo_keys": 17,
+    "complete_sha_pairs": 333,
+    "nonempty_buggy_and_fixed_ids": 501,
+    "one_changed_python_file": 410,
+    "one_changed_file_total": 410,
+    "test_command_present": 501,
+    "static_flags": {
+      "not_one_python_file": 91,
+      "abbreviated_or_invalid_buggy_sha": 168
+    },
+    "by_project": {
+      "PySnooper": 3,
+      "ansible": 18,
+      "black": 23,
+      "cookiecutter": 4,
+      "fastapi": 16,
+      "httpie": 5,
+      "keras": 45,
+      "luigi": 33,
+      "matplotlib": 30,
+      "pandas": 169,
+      "sanic": 5,
+      "scrapy": 40,
+      "spacy": 10,
+      "thefuck": 32,
+      "tornado": 16,
+      "tqdm": 9,
+      "youtube-dl": 43
+    }
+  },
+  "PyResBugs": {
+    "raw_records": 5007,
+    "unique_repo_keys_from_url": 100,
+    "complete_fixed_sha": 5002,
+    "one_changed_python_file": 165,
+    "code_pair_present": 5007,
+    "test_path_present": 3824,
+    "repeated_repo_fixed_commit_key_rows": 1756,
+    "static_flags": {
+      "repo_url_mismatch": 4147,
+      "not_one_python_file": 4842,
+      "missing_test_path": 1183,
+      "missing_or_invalid_fixed_sha": 5
+    },
+    "bug_type_counts": {
+      "<blank>": 4698,
+      "security": 192,
+      "binop": 28,
+      "semantic": 25,
+      "numeric": 16,
+      "corruption - memory": 13,
+      "perf": 12,
+      "varmisuse": 11,
+      "concurrency - deadlock": 4,
+      "corruption - conversion": 2,
+      "concurrency - race condition": 2,
+      "corruption - silent": 1,
+      "concurrency - atomic": 1,
+      "CWE-703: Improper Check or Handling of Exceptional Conditions": 1,
+      "resource leak": 1
+    },
+    "dataset_input_counts": {
+      "Defectors": 4191,
+      "BugsInPy": 235,
+      "PySecDB": 204,
+      "MoreFixes": 98,
+      "PyTraceBugs": 84,
+      "nbfbaseline": 55,
+      "How Bad Can a Bug Get": 36,
+      "Custom": 34,
+      "DLFrameworksFaultTriggers": 27,
+      "CVEFixes": 18,
+      "patch-tracer": 18,
+      "SilentTensorflowBugs": 6,
+      "GitHub": 1
+    },
+    "mismatch_examples": [
+      "row_2",
+      "row_3",
+      "row_4",
+      "row_5",
+      "row_6",
+      "row_7",
+      "row_8",
+      "row_9",
+      "row_10",
+      "row_11"
+    ]
+  },
+  "QuixBugs": {
+    "raw_python_files_including_helpers": 50,
+    "fixed_python_files_including_helpers": 50,
+    "canonical_test_programs": 40,
+    "matched_buggy": 40,
+    "matched_fixed": 40,
+    "matched_pytests": 40,
+    "matched_json_testcases": 31,
+    "smoke": {
+      "case": "quicksort",
+      "json_testcases": 13,
+      "buggy_fail_fixed_pass_per_run": [
+        1,
+        1,
+        1
+      ],
+      "buggy_pass_fixed_pass_per_run": [
+        12,
+        12,
+        12
+      ],
+      "fixed_fail_per_run": [
+        0,
+        0,
+        0
+      ],
+      "runs": 3,
+      "method": "direct stdlib invocation of bundled JSON inputs; not original pytest harness"
+    }
+  },
+  "cross_source_fixed_sha_matches": [
+    {
+      "bugs_in_py": "ansible/9",
+      "pyresbugs": "row_45",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/8",
+      "pyresbugs": "row_46",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/10",
+      "pyresbugs": "row_84",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/9",
+      "pyresbugs": "row_103",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/11",
+      "pyresbugs": "row_129",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/1",
+      "pyresbugs": "row_138",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/7",
+      "pyresbugs": "row_165",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/6",
+      "pyresbugs": "row_166",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/5",
+      "pyresbugs": "row_177",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/13",
+      "pyresbugs": "row_197",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/12",
+      "pyresbugs": "row_203",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/7",
+      "pyresbugs": "row_221",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/18",
+      "pyresbugs": "row_239",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/11",
+      "pyresbugs": "row_269",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/11",
+      "pyresbugs": "row_274",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/16",
+      "pyresbugs": "row_292",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/6",
+      "pyresbugs": "row_309",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/15",
+      "pyresbugs": "row_333",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/3",
+      "pyresbugs": "row_334",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/9",
+      "pyresbugs": "row_355",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/6",
+      "pyresbugs": "row_358",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/5",
+      "pyresbugs": "row_416",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/13",
+      "pyresbugs": "row_431",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "ansible/14",
+      "pyresbugs": "row_437",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "cookiecutter/4",
+      "pyresbugs": "row_915",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "cookiecutter/4",
+      "pyresbugs": "row_916",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "cookiecutter/1",
+      "pyresbugs": "row_917",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "cookiecutter/4",
+      "pyresbugs": "row_918",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "cookiecutter/2",
+      "pyresbugs": "row_919",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "cookiecutter/2",
+      "pyresbugs": "row_920",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "cookiecutter/4",
+      "pyresbugs": "row_922",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "PySnooper/1",
+      "pyresbugs": "row_923",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "PySnooper/1",
+      "pyresbugs": "row_924",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "spacy/6",
+      "pyresbugs": "row_1619",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "spacy/1",
+      "pyresbugs": "row_1625",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "spacy/5",
+      "pyresbugs": "row_1627",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "spacy/3",
+      "pyresbugs": "row_1628",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "spacy/7",
+      "pyresbugs": "row_1629",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "spacy/4",
+      "pyresbugs": "row_1630",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "sanic/1",
+      "pyresbugs": "row_1636",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "sanic/4",
+      "pyresbugs": "row_1637",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/24",
+      "pyresbugs": "row_1644",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/20",
+      "pyresbugs": "row_1645",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/9",
+      "pyresbugs": "row_1646",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/1",
+      "pyresbugs": "row_1647",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/26",
+      "pyresbugs": "row_1648",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/1",
+      "pyresbugs": "row_1649",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/13",
+      "pyresbugs": "row_1650",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/31",
+      "pyresbugs": "row_1651",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/20",
+      "pyresbugs": "row_1652",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/20",
+      "pyresbugs": "row_1654",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/39",
+      "pyresbugs": "row_1655",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/10",
+      "pyresbugs": "row_1656",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/14",
+      "pyresbugs": "row_1657",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/32",
+      "pyresbugs": "row_1658",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/17",
+      "pyresbugs": "row_1659",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/1",
+      "pyresbugs": "row_1660",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/38",
+      "pyresbugs": "row_1661",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/1",
+      "pyresbugs": "row_1662",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/36",
+      "pyresbugs": "row_1663",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/40",
+      "pyresbugs": "row_1664",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/15",
+      "pyresbugs": "row_1665",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/33",
+      "pyresbugs": "row_1666",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/3",
+      "pyresbugs": "row_1667",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/6",
+      "pyresbugs": "row_1668",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "keras/32",
+      "pyresbugs": "row_1670",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "matplotlib/26",
+      "pyresbugs": "row_1687",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "matplotlib/4",
+      "pyresbugs": "row_1688",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "matplotlib/4",
+      "pyresbugs": "row_1689",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "matplotlib/4",
+      "pyresbugs": "row_1690",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "matplotlib/4",
+      "pyresbugs": "row_1692",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "matplotlib/20",
+      "pyresbugs": "row_1693",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "matplotlib/27",
+      "pyresbugs": "row_1694",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "matplotlib/15",
+      "pyresbugs": "row_1695",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "matplotlib/30",
+      "pyresbugs": "row_1696",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "matplotlib/15",
+      "pyresbugs": "row_1697",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "matplotlib/12",
+      "pyresbugs": "row_1698",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "matplotlib/20",
+      "pyresbugs": "row_1699",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "matplotlib/6",
+      "pyresbugs": "row_1700",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "matplotlib/29",
+      "pyresbugs": "row_1701",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "matplotlib/15",
+      "pyresbugs": "row_1702",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "matplotlib/3",
+      "pyresbugs": "row_1703",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "matplotlib/14",
+      "pyresbugs": "row_1704",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "matplotlib/12",
+      "pyresbugs": "row_1705",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "matplotlib/21",
+      "pyresbugs": "row_1706",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "matplotlib/10",
+      "pyresbugs": "row_1707",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "matplotlib/25",
+      "pyresbugs": "row_1708",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "matplotlib/11",
+      "pyresbugs": "row_1709",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/87",
+      "pyresbugs": "row_1914",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/21",
+      "pyresbugs": "row_1934",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/3",
+      "pyresbugs": "row_1935",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/3",
+      "pyresbugs": "row_1938",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/162",
+      "pyresbugs": "row_1958",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/130",
+      "pyresbugs": "row_1964",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/151",
+      "pyresbugs": "row_1965",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/73",
+      "pyresbugs": "row_2003",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/147",
+      "pyresbugs": "row_2006",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/102",
+      "pyresbugs": "row_2018",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/107",
+      "pyresbugs": "row_2049",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/91",
+      "pyresbugs": "row_2089",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/32",
+      "pyresbugs": "row_2100",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/92",
+      "pyresbugs": "row_2102",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/92",
+      "pyresbugs": "row_2125",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/167",
+      "pyresbugs": "row_2132",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/99",
+      "pyresbugs": "row_2157",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/154",
+      "pyresbugs": "row_2158",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/156",
+      "pyresbugs": "row_2162",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/117",
+      "pyresbugs": "row_2170",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/35",
+      "pyresbugs": "row_2186",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/152",
+      "pyresbugs": "row_2216",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/34",
+      "pyresbugs": "row_2228",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/122",
+      "pyresbugs": "row_2243",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/82",
+      "pyresbugs": "row_2251",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/18",
+      "pyresbugs": "row_2261",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/116",
+      "pyresbugs": "row_2274",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/12",
+      "pyresbugs": "row_2296",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/38",
+      "pyresbugs": "row_2305",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/28",
+      "pyresbugs": "row_2340",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/12",
+      "pyresbugs": "row_2344",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/9",
+      "pyresbugs": "row_2361",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/78",
+      "pyresbugs": "row_2372",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/118",
+      "pyresbugs": "row_2387",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/165",
+      "pyresbugs": "row_2408",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/114",
+      "pyresbugs": "row_2422",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/150",
+      "pyresbugs": "row_2432",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/119",
+      "pyresbugs": "row_2448",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/11",
+      "pyresbugs": "row_2450",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/94",
+      "pyresbugs": "row_2464",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/156",
+      "pyresbugs": "row_2467",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/115",
+      "pyresbugs": "row_2498",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/147",
+      "pyresbugs": "row_2567",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/143",
+      "pyresbugs": "row_2568",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/119",
+      "pyresbugs": "row_2575",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/92",
+      "pyresbugs": "row_2578",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/100",
+      "pyresbugs": "row_2581",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/161",
+      "pyresbugs": "row_2587",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/158",
+      "pyresbugs": "row_2592",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/150",
+      "pyresbugs": "row_2596",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/43",
+      "pyresbugs": "row_2656",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/168",
+      "pyresbugs": "row_2685",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/83",
+      "pyresbugs": "row_2686",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/16",
+      "pyresbugs": "row_2696",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/160",
+      "pyresbugs": "row_2729",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/89",
+      "pyresbugs": "row_2762",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/75",
+      "pyresbugs": "row_2766",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/23",
+      "pyresbugs": "row_2790",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/58",
+      "pyresbugs": "row_2840",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/43",
+      "pyresbugs": "row_2850",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/75",
+      "pyresbugs": "row_2861",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/122",
+      "pyresbugs": "row_2869",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/83",
+      "pyresbugs": "row_2873",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/40",
+      "pyresbugs": "row_2875",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/92",
+      "pyresbugs": "row_2894",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/65",
+      "pyresbugs": "row_2898",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/27",
+      "pyresbugs": "row_2915",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/72",
+      "pyresbugs": "row_2924",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/14",
+      "pyresbugs": "row_2937",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/1",
+      "pyresbugs": "row_2939",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/48",
+      "pyresbugs": "row_2940",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/117",
+      "pyresbugs": "row_2942",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/106",
+      "pyresbugs": "row_2952",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/126",
+      "pyresbugs": "row_2959",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/4",
+      "pyresbugs": "row_2961",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/16",
+      "pyresbugs": "row_2986",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/25",
+      "pyresbugs": "row_2990",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/144",
+      "pyresbugs": "row_3014",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/29",
+      "pyresbugs": "row_3019",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/65",
+      "pyresbugs": "row_3028",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/102",
+      "pyresbugs": "row_3033",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/169",
+      "pyresbugs": "row_3043",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/111",
+      "pyresbugs": "row_3050",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/74",
+      "pyresbugs": "row_3061",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/159",
+      "pyresbugs": "row_3079",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/91",
+      "pyresbugs": "row_3098",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/142",
+      "pyresbugs": "row_3187",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/60",
+      "pyresbugs": "row_3216",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/141",
+      "pyresbugs": "row_3220",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/90",
+      "pyresbugs": "row_3279",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/148",
+      "pyresbugs": "row_3291",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/16",
+      "pyresbugs": "row_3379",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/138",
+      "pyresbugs": "row_3410",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/30",
+      "pyresbugs": "row_3424",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/135",
+      "pyresbugs": "row_3436",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/146",
+      "pyresbugs": "row_3437",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/6",
+      "pyresbugs": "row_3439",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/98",
+      "pyresbugs": "row_3443",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/126",
+      "pyresbugs": "row_3444",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/146",
+      "pyresbugs": "row_3448",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/33",
+      "pyresbugs": "row_3452",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "pandas/166",
+      "pyresbugs": "row_3474",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "black/18",
+      "pyresbugs": "row_3505",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "black/13",
+      "pyresbugs": "row_3507",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "black/12",
+      "pyresbugs": "row_3512",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "black/2",
+      "pyresbugs": "row_3516",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "black/9",
+      "pyresbugs": "row_3525",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "black/5",
+      "pyresbugs": "row_3529",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "black/1",
+      "pyresbugs": "row_3530",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "black/18",
+      "pyresbugs": "row_3544",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "black/16",
+      "pyresbugs": "row_3547",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "black/20",
+      "pyresbugs": "row_3549",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "black/13",
+      "pyresbugs": "row_3554",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "black/12",
+      "pyresbugs": "row_3557",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "black/6",
+      "pyresbugs": "row_3560",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "black/8",
+      "pyresbugs": "row_3567",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/4",
+      "pyresbugs": "row_4856",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/15",
+      "pyresbugs": "row_4857",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/20",
+      "pyresbugs": "row_4858",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/37",
+      "pyresbugs": "row_4859",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/27",
+      "pyresbugs": "row_4860",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/31",
+      "pyresbugs": "row_4862",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/39",
+      "pyresbugs": "row_4865",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/24",
+      "pyresbugs": "row_4866",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/18",
+      "pyresbugs": "row_4875",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/32",
+      "pyresbugs": "row_4876",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/3",
+      "pyresbugs": "row_4878",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/30",
+      "pyresbugs": "row_4879",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/31",
+      "pyresbugs": "row_4881",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/40",
+      "pyresbugs": "row_4882",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/31",
+      "pyresbugs": "row_4883",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/31",
+      "pyresbugs": "row_4885",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/23",
+      "pyresbugs": "row_4886",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/30",
+      "pyresbugs": "row_4890",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/1",
+      "pyresbugs": "row_4893",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/10",
+      "pyresbugs": "row_4894",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/17",
+      "pyresbugs": "row_4895",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/23",
+      "pyresbugs": "row_4897",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/31",
+      "pyresbugs": "row_4899",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/31",
+      "pyresbugs": "row_4900",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/7",
+      "pyresbugs": "row_4901",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "scrapy/35",
+      "pyresbugs": "row_4906",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "luigi/11",
+      "pyresbugs": "row_4911",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "luigi/33",
+      "pyresbugs": "row_4912",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "luigi/18",
+      "pyresbugs": "row_4913",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "luigi/19",
+      "pyresbugs": "row_4914",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "luigi/16",
+      "pyresbugs": "row_4915",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "luigi/15",
+      "pyresbugs": "row_4916",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "luigi/27",
+      "pyresbugs": "row_4917",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "luigi/27",
+      "pyresbugs": "row_4918",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "luigi/5",
+      "pyresbugs": "row_4919",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "luigi/5",
+      "pyresbugs": "row_4920",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "luigi/10",
+      "pyresbugs": "row_4921",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "luigi/27",
+      "pyresbugs": "row_4922",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "luigi/13",
+      "pyresbugs": "row_4923",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "luigi/27",
+      "pyresbugs": "row_4924",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "luigi/22",
+      "pyresbugs": "row_4925",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "luigi/7",
+      "pyresbugs": "row_4926",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "luigi/8",
+      "pyresbugs": "row_4927",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "luigi/26",
+      "pyresbugs": "row_4928",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "luigi/4",
+      "pyresbugs": "row_4929",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "luigi/12",
+      "pyresbugs": "row_4930",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "luigi/31",
+      "pyresbugs": "row_4931",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "fastapi/16",
+      "pyresbugs": "row_4976",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "fastapi/13",
+      "pyresbugs": "row_4977",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "fastapi/2",
+      "pyresbugs": "row_4978",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "tornado/12",
+      "pyresbugs": "row_4980",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "tornado/11",
+      "pyresbugs": "row_4981",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "tornado/13",
+      "pyresbugs": "row_4982",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "tornado/7",
+      "pyresbugs": "row_4983",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "tqdm/1",
+      "pyresbugs": "row_4984",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "tqdm/8",
+      "pyresbugs": "row_4985",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "tqdm/4",
+      "pyresbugs": "row_4986",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "tqdm/9",
+      "pyresbugs": "row_4988",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "tqdm/6",
+      "pyresbugs": "row_4989",
+      "same_repo_key": true
+    },
+    {
+      "bugs_in_py": "tqdm/9",
+      "pyresbugs": "row_4990",
+      "same_repo_key": true
+    }
+  ],
+  "cross_source_fixed_sha_match_counts": {
+    "pyres_rows": 264,
+    "unique_bugsinpy_cases": 201,
+    "same_repo_key": 264
+  }
+}

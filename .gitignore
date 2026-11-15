@@ -1,0 +1,17 @@
+/.venv/
+/data/QuixBugs/
+/runs/
+/work/
+/configs/*.local.json
+/audit/BugsInPy/
+/audit/PyResBugs/
+/audit/QuixBugs/
+/audit/dataset_candidates_v6.jsonl
+/examples/quixbugs10/results/recheck/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.py[cod]
+.env
+.env.*
+/data/acceptance/

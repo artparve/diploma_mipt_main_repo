@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "file": "python_programs/find_in_sorted.py",
+      "line_start": 9,
+      "line_end": 9,
+      "category": "runtime",
+      "severity": "medium",
+      "comment": "При поиске справа диапазон может не уменьшаться, потому что mid повторно попадает в рекурсивный вызов. Из-за этого возможна бесконечная рекурсия. Следует сдвинуть левую границу.",
+      "proposed_patch": null,
+      "confidence": 0.85
+    }
+  ]
+}

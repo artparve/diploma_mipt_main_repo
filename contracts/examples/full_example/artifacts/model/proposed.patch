@@ -1,0 +1,7 @@
+--- a/src/math_utils.py
++++ b/src/math_utils.py
+@@ -1,2 +1,4 @@
+ def average(values):
++    if not values:
++        raise ValueError("values must not be empty")
+     return sum(values) / len(values)

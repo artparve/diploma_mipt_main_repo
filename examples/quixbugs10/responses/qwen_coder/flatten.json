@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "file": "python_programs/flatten.py",
+      "line_start": 7,
+      "line_end": 7,
+      "category": "functional",
+      "severity": "medium",
+      "comment": "В else выдаётся flatten(x), то есть генератор, хотя x уже является не-списочным конечным элементом. Замените на yield x. Тогда list(flatten([1, [2]])) вернёт [1, 2].",
+      "proposed_patch": "--- a/python_programs/flatten.py\n+++ b/python_programs/flatten.py\n@@ -4,7 +4,7 @@\n             for y in flatten(x):\n                 yield y\n         else:\n-            yield flatten(x)\n+            yield x\n \n \n \n",
+      "confidence": 0.85
+    }
+  ]
+}

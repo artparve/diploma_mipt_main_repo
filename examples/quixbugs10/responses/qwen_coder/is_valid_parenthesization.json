@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "file": "python_programs/is_valid_parenthesization.py",
+      "line_start": 12,
+      "line_end": 12,
+      "category": "functional",
+      "severity": "medium",
+      "comment": "Проверка отрицательной глубины ловит лишние закрывающие скобки, но финальный return True принимает незакрытые открывающие. Возвращайте depth == 0 после цикла; ранний отказ при depth < 0 сохраните.",
+      "proposed_patch": "--- a/python_programs/is_valid_parenthesization.py\n+++ b/python_programs/is_valid_parenthesization.py\n@@ -9,7 +9,7 @@\n             if depth < 0:\n                 return False\n \n-    return True\n+    return depth == 0\n \n \n \"\"\"\n",
+      "confidence": 0.85
+    }
+  ]
+}

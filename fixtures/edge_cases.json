@@ -1,0 +1,10 @@
+{
+  "synthetic": true,
+  "kind": "trusted_failure_path_fixtures",
+  "notice": "Technical checks only, not model responses.",
+  "responses": {
+    "gcd": "{\"schema_version\":\"1.0\",\"issues\":[]}",
+    "find_in_sorted": "{\"schema_version\":\"1.0\",\"issues\":[{\"file\":\"python_programs/find_in_sorted.py\",\"line_start\":1,\"line_end\":1,\"category\":\"functional\",\"severity\":\"medium\",\"comment\":\"Технический пример неприменимого patch.\",\"proposed_patch\":\"--- a/python_programs/find_in_sorted.py\\n+++ b/python_programs/find_in_sorted.py\\n@@ -1 +1 @@\\n-this context does not exist\\n+replacement\\n\",\"confidence\":0.5}]}",
+    "quicksort": "{ invalid JSON"
+  }
+}

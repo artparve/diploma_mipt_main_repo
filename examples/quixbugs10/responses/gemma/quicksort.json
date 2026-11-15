@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "file": "python_programs/quicksort.py",
+      "line_start": 7,
+      "line_end": 7,
+      "category": "functional",
+      "severity": "medium",
+      "comment": "Оба списка исключают элементы, равные pivot, поэтому сортировка теряет дубликаты. Разрешите равенство в одной из частей, чтобы сохранить элементы.",
+      "proposed_patch": "--- a/python_programs/quicksort.py\n+++ b/python_programs/quicksort.py\n@@ -3,8 +3,8 @@\n         return []\n \n     pivot = arr[0]\n-    lesser = quicksort([x for x in arr[1:] if x < pivot])\n-    greater = quicksort([x for x in arr[1:] if x > pivot])\n+    lesser = quicksort([x for x in arr[1:] if x <= pivot])\n+    greater = quicksort([x for x in arr[1:] if x >= pivot])\n     return lesser + [pivot] + greater\n \n \"\"\"\n",
+      "confidence": 0.85
+    }
+  ]
+}

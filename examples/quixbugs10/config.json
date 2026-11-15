@@ -1,0 +1,189 @@
+{
+  "report_date": "2026-10-14",
+  "backend": "saved_responses",
+  "real_models_called": false,
+  "weights": {
+    "D": 0.3333333333333333,
+    "C": 0.3333333333333333,
+    "Q": 0.3333333333333333
+  },
+  "case_ids": [
+    "gcd",
+    "find_in_sorted",
+    "quicksort",
+    "mergesort",
+    "sieve",
+    "flatten",
+    "is_valid_parenthesization",
+    "levenshtein",
+    "max_sublist_sum",
+    "powerset"
+  ],
+  "reviews": [
+    {
+      "review_id": "gcd__gemma",
+      "case_id": "gcd",
+      "model_key": "gemma",
+      "response_group": "Gemma",
+      "response_file": "responses/gemma/gcd.json",
+      "execution_file": "evidence/patches/gemma/gcd/execution.json"
+    },
+    {
+      "review_id": "gcd__qwen_coder",
+      "case_id": "gcd",
+      "model_key": "qwen_coder",
+      "response_group": "Qwen-Coder",
+      "response_file": "responses/qwen_coder/gcd.json",
+      "execution_file": "evidence/patches/qwen_coder/gcd/execution.json"
+    },
+    {
+      "review_id": "find_in_sorted__gemma",
+      "case_id": "find_in_sorted",
+      "model_key": "gemma",
+      "response_group": "Gemma",
+      "response_file": "responses/gemma/find_in_sorted.json",
+      "execution_file": null
+    },
+    {
+      "review_id": "find_in_sorted__qwen_coder",
+      "case_id": "find_in_sorted",
+      "model_key": "qwen_coder",
+      "response_group": "Qwen-Coder",
+      "response_file": "responses/qwen_coder/find_in_sorted.json",
+      "execution_file": "evidence/patches/qwen_coder/find_in_sorted/execution.json"
+    },
+    {
+      "review_id": "quicksort__gemma",
+      "case_id": "quicksort",
+      "model_key": "gemma",
+      "response_group": "Gemma",
+      "response_file": "responses/gemma/quicksort.json",
+      "execution_file": "evidence/patches/gemma/quicksort/execution.json"
+    },
+    {
+      "review_id": "quicksort__qwen_coder",
+      "case_id": "quicksort",
+      "model_key": "qwen_coder",
+      "response_group": "Qwen-Coder",
+      "response_file": "responses/qwen_coder/quicksort.json",
+      "execution_file": "evidence/patches/qwen_coder/quicksort/execution.json"
+    },
+    {
+      "review_id": "mergesort__gemma",
+      "case_id": "mergesort",
+      "model_key": "gemma",
+      "response_group": "Gemma",
+      "response_file": "responses/gemma/mergesort.json",
+      "execution_file": "evidence/patches/gemma/mergesort/execution.json"
+    },
+    {
+      "review_id": "mergesort__qwen_coder",
+      "case_id": "mergesort",
+      "model_key": "qwen_coder",
+      "response_group": "Qwen-Coder",
+      "response_file": "responses/qwen_coder/mergesort.json",
+      "execution_file": "evidence/patches/qwen_coder/mergesort/execution.json"
+    },
+    {
+      "review_id": "sieve__gemma",
+      "case_id": "sieve",
+      "model_key": "gemma",
+      "response_group": "Gemma",
+      "response_file": "responses/gemma/sieve.json",
+      "execution_file": null
+    },
+    {
+      "review_id": "sieve__qwen_coder",
+      "case_id": "sieve",
+      "model_key": "qwen_coder",
+      "response_group": "Qwen-Coder",
+      "response_file": "responses/qwen_coder/sieve.json",
+      "execution_file": "evidence/patches/qwen_coder/sieve/execution.json"
+    },
+    {
+      "review_id": "flatten__gemma",
+      "case_id": "flatten",
+      "model_key": "gemma",
+      "response_group": "Gemma",
+      "response_file": "responses/gemma/flatten.json",
+      "execution_file": "evidence/patches/gemma/flatten/execution.json"
+    },
+    {
+      "review_id": "flatten__qwen_coder",
+      "case_id": "flatten",
+      "model_key": "qwen_coder",
+      "response_group": "Qwen-Coder",
+      "response_file": "responses/qwen_coder/flatten.json",
+      "execution_file": "evidence/patches/qwen_coder/flatten/execution.json"
+    },
+    {
+      "review_id": "is_valid_parenthesization__gemma",
+      "case_id": "is_valid_parenthesization",
+      "model_key": "gemma",
+      "response_group": "Gemma",
+      "response_file": "responses/gemma/is_valid_parenthesization.json",
+      "execution_file": "evidence/patches/gemma/is_valid_parenthesization/execution.json"
+    },
+    {
+      "review_id": "is_valid_parenthesization__qwen_coder",
+      "case_id": "is_valid_parenthesization",
+      "model_key": "qwen_coder",
+      "response_group": "Qwen-Coder",
+      "response_file": "responses/qwen_coder/is_valid_parenthesization.json",
+      "execution_file": "evidence/patches/qwen_coder/is_valid_parenthesization/execution.json"
+    },
+    {
+      "review_id": "levenshtein__gemma",
+      "case_id": "levenshtein",
+      "model_key": "gemma",
+      "response_group": "Gemma",
+      "response_file": "responses/gemma/levenshtein.json",
+      "execution_file": null
+    },
+    {
+      "review_id": "levenshtein__qwen_coder",
+      "case_id": "levenshtein",
+      "model_key": "qwen_coder",
+      "response_group": "Qwen-Coder",
+      "response_file": "responses/qwen_coder/levenshtein.json",
+      "execution_file": "evidence/patches/qwen_coder/levenshtein/execution.json"
+    },
+    {
+      "review_id": "max_sublist_sum__gemma",
+      "case_id": "max_sublist_sum",
+      "model_key": "gemma",
+      "response_group": "Gemma",
+      "response_file": "responses/gemma/max_sublist_sum.json",
+      "execution_file": "evidence/patches/gemma/max_sublist_sum/execution.json"
+    },
+    {
+      "review_id": "max_sublist_sum__qwen_coder",
+      "case_id": "max_sublist_sum",
+      "model_key": "qwen_coder",
+      "response_group": "Qwen-Coder",
+      "response_file": "responses/qwen_coder/max_sublist_sum.json",
+      "execution_file": null
+    },
+    {
+      "review_id": "powerset__gemma",
+      "case_id": "powerset",
+      "model_key": "gemma",
+      "response_group": "Gemma",
+      "response_file": "responses/gemma/powerset.json",
+      "execution_file": "evidence/patches/gemma/powerset/execution.json"
+    },
+    {
+      "review_id": "powerset__qwen_coder",
+      "case_id": "powerset",
+      "model_key": "qwen_coder",
+      "response_group": "Qwen-Coder",
+      "response_file": "responses/qwen_coder/powerset.json",
+      "execution_file": "evidence/patches/qwen_coder/powerset/execution.json"
+    }
+  ],
+  "test_timeout_seconds": 2,
+  "slow_case_timeout_seconds": 10,
+  "process_timeout_seconds": 60,
+  "number_of_component_ratings": 2,
+  "annotation_source": "annotations/ratings.json"
+}

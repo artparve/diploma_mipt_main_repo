@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "file": "average.py",
+      "line_start": 3,
+      "line_end": 3,
+      "category": "runtime",
+      "severity": "medium",
+      "comment": "В строке 3 при values=[] длина списка равна нулю, поэтому возникает ZeroDivisionError вместо предусмотренного None. До деления добавьте проверку if not values и возврат None; для непустого списка сохраните вычисление среднего.",
+      "proposed_patch": "--- a/average.py\n+++ b/average.py\n@@ -1,3 +1,5 @@\n def average(values):\n     \"\"\"Среднее списка чисел; для пустого списка вернуть None.\"\"\"\n+    if not values:\n+        return None\n     return sum(values) / len(values)\n",
+      "confidence": 0.9
+    }
+  ]
+}

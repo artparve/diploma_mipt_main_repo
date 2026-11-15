@@ -1,0 +1,9 @@
+{
+  "cases": 40,
+  "eligible_q": 31,
+  "checked_at": "2026-10-07T14:09:50.091757+00:00",
+  "manifest_sha256": "2120c30494cc6672a3a377180719bd1cc39cba71ef641e1b956d41809a92e1cc",
+  "executor": "trusted_local",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "notice": "Technical corpus; no human labels and no LLM results."
+}
